@@ -22,15 +22,31 @@
 
 
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include:
- > * Why is it important or interesting to you?
- > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
- >   * [toolname](link) - Short description
- > * What will be the input/output of your project? What are the features that the project provides?
- > 
- > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
- > 
- > You also need to set up an empty project board by choosing the  “Automated kanban with review” option on Github. You should also have a Backlog and In testing columns added.
+> Why is it important or interesting to you?
+ > * The learning experience we will get from making a user interface game
+
+> What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+ > * Languages:
+ >   * C++
+ >   * Python
+ >   * Java
+ > * Tools
+ >   * VS Code
+ >   * Qt Creator
+ > * Technologies
+ >   * Windows OS  
+> Input will always be mouse click. Output will be either the movement of a chess piece or execution of a main menu button (e.g. "new game" sets up a fresh board)  
+
+> Features:
+ > * Must have:
+ >   * 2-player Chess game
+ >   * Option to undo moves
+ >   * Main menu
+ >   * Functioning GUI to display the board and its pieces
+ > * Want to have:
+ >   * Saving and loading game
+ >   * Display possible places to move after Chess piece selected
+ >   * Animations for Chess pieces when moving
  > ## Phase II
  > In addition to completing the "Class Diagram" section below, you will need to:
  > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column

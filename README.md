@@ -1,4 +1,4 @@
-# Chess Game (Title to be changed later)
+# Chess Game
  
  > Authors: [Ethan Wan](https://github.com/ELW123),
  >          [Bobby Nguyen](https://github.com/HollowGrimm),

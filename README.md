@@ -31,7 +31,7 @@
  >   * Animations for Chess pieces when moving
 
 ## Class Diagram
-![UML Diagram (1)](https://user-images.githubusercontent.com/51334912/153334831-7ff11ae7-4638-4f29-b64a-4baa87388b99.png)
+![UML Diagram (2)](https://user-images.githubusercontent.com/51334912/153480178-6e3432b9-73a2-4557-8629-76c9174a3a3d.png)
  > * ChessBoard
  >   * ChessBoard is a class that encapsulates a list of squares and a list of setPieces. It includes an InitialCreate() function which initializes 2 SetPieces objects and a list of 64 Squares.
  >   * SetPieces

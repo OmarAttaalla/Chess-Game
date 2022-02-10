@@ -12,8 +12,6 @@
 > What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  > * Languages:
  >   * C++
- >   * Python
- >   * Java
  > * Tools
  >   * VS Code
  >   * Qt Creator

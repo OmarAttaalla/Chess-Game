@@ -43,6 +43,32 @@
 
 ## Class Diagram
 ![UML Diagram (1)](https://user-images.githubusercontent.com/51334912/153334831-7ff11ae7-4638-4f29-b64a-4baa87388b99.png)
+ > * ChessBoard
+ >   * ChessBoard is a class that encapsulates a list of squares, a list of setPieces, . It includes an InitialCreate() function which initializes 2 SetPieces objects and a list of 64 Squares.
+ >   * SetPieces
+ >     * SetPieces is a class that initializes a list of the of the chess pieces that will appear on the board and the color of the team they will be a part of. It also includes a function for creating singular pieces (which is meant to be used by the pawn) and a getter function to call the color variable.
+ >   * Square
+ >     * Square is a class that determines the position of the squares that appear on the chess board. It includes getter functions that call the row and column of a square. This class can be used to determine the positions of the pieces during the game.
+ > * ChessPiece
+ >   * ChessPiece is an abstract class that encapsulates the virtual functions, Moves() and scan(). The Moves() function allows the player to move a piece to a square of their choice. The scan helper function calculates all the possible spaces that a piece can move towards and stores it in an array. It also includes the pieceDeath() function that determines whether or not a piece has been captured or not. This class is inherited by the subclasses of each piece.
+ >   * King
+ >     * King is a subclass of ChessPiece and encapsulates a boolean for if the King is in check, a function for checking if the King is in check, and a checkmate function that checks if the King is in checkmate. (This includes inherited methods and attributes).
+ >   * Pawn
+ >     * Pawn is a subclass of ChessPiece and encapsulates an initialMove attribute that checks if the pawn was moved before or not. Pawn has a separate attack function as it’s move and attack are separate in game. Additionally, Pawn has a unique “transform” function that lets it transform into another piece if it reaches the other side of the board
+ >   * Queen, Rook, Knight, and Bishop only differ in their move function; they have no unique functions outside of ChessPiece
+ > * Game
+ >   * Game is a class that stores a list of PlayerMoves, who’s turn it is, the players, and the state of the game. Additionally, it has a create() function which initializes a game. An addMove() function adds the player’s moves to the list of PlayerMoves and a gameEnd() function ends the game.
+ > * MainMenu
+ >   * MainMenu is a class that allows a user to start, resume, or quit a game. 
+ > * Loading
+ >   * Loading is a class that determines whether or not the game is set up by means of the loadState variable and switches to the chess board via the nextScene() function.
+ > * InGame
+ >   * InGame is a class that gives the player the option of saving, undoing, or quitting the game.
+ > * Player
+ >   * Player is a class that represents a player. It stores what color the player is, the wins of the player, the losses of the player, and the draws of the player. Additionally, Player has a makeMove() function that is called when a player makes a move.
+ > * PlayerMoves
+ >   * PlayerMoves stores a Square object for the beginningSquare of where a piece was and an endSquare of where the Piece was moved to. It will also store the ChessPiece that was moved.
+
  > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
  
  > ## Phase III

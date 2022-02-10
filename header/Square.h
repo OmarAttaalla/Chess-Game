@@ -7,6 +7,9 @@ class Square {
         int row;
         int column;
     public:
+        Square();
+        Square(int r, int c);
+    
         int get_row();
         int get_column();
 };

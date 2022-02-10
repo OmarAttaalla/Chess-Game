@@ -29,17 +29,6 @@
  >   * Saving and loading game
  >   * Display possible places to move after Chess piece selected
  >   * Animations for Chess pieces when moving
- > ## Phase II
- > In addition to completing the "Class Diagram" section below, you will need to:
- > * Create an "Epic" (note) for each feature and each design pattern and assign them to the appropriate team member. Place these in the `Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Create smaller actionable development tasks as issues and assign them to team members. Place these in the `TODO` column.
- >   * These cards should represent roughly 7 days worth of development time for your team, taking you until your first meeting with the TA
- > * Schedule two check-ins using Calendly. You need to pick both time slots during your lab on week 8. Your entire team must be present for both check-ins.
- >   * The first check-in needs to be scheduled with your lab TA. During that meeting, you will discuss your project design/class diagram from phase II.
- >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
- >     * The tasks you are planning for the first sprint
- >     * How work will be divided between the team members
 
 ## Class Diagram
 ![UML Diagram (1)](https://user-images.githubusercontent.com/51334912/153334831-7ff11ae7-4638-4f29-b64a-4baa87388b99.png)
@@ -68,8 +57,6 @@
  >   * Player is a class that represents a player. It stores what color the player is, the wins of the player, the losses of the player, and the draws of the player. Additionally, Player has a makeMove() function that is called when a player makes a move.
  > * PlayerMoves
  >   * PlayerMoves stores a Square object for the beginningSquare of where a piece was and an endSquare of where the Piece was moved to. It will also store the ChessPiece that was moved.
-
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with a reader (using Calendly). Your entire team must be present. This meeting will occur on week 8 but NOT during lab time.

@@ -9,7 +9,7 @@ Authors: [Ethan Wan](https://github.com/ELW123),
 Why is it important or interesting to you?
 * The learning experience we will get from making a user interface game
 
-> What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
 * Languages:
   * C++
 * Tools
@@ -19,7 +19,7 @@ Why is it important or interesting to you?
   * Windows OS  
 Input will always be mouse click. Output will be either the movement of a chess piece or execution of a main menu button (e.g. "new game" sets up a fresh board)  
 
-> Features:
+Features:
 * Must have:
   * 2-player Chess game
   * Option to undo moves

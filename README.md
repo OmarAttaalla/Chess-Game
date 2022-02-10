@@ -33,7 +33,7 @@
 ## Class Diagram
 ![UML Diagram (1)](https://user-images.githubusercontent.com/51334912/153334831-7ff11ae7-4638-4f29-b64a-4baa87388b99.png)
  > * ChessBoard
- >   * ChessBoard is a class that encapsulates a list of squares, a list of setPieces, . It includes an InitialCreate() function which initializes 2 SetPieces objects and a list of 64 Squares.
+ >   * ChessBoard is a class that encapsulates a list of squares and a list of setPieces. It includes an InitialCreate() function which initializes 2 SetPieces objects and a list of 64 Squares.
  >   * SetPieces
  >     * SetPieces is a class that initializes a list of the of the chess pieces that will appear on the board and the color of the team they will be a part of. It also includes a function for creating singular pieces (which is meant to be used by the pawn) and a getter function to call the color variable.
  >   * Square

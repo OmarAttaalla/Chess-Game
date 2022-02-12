@@ -8,8 +8,8 @@ class Rook : public ChessPiece {
         
     public:
         virtual void Moves();
+        virtual void scan();
         virtual void pieceDeath();
-        void scan();
 };
 
 

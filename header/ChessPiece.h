@@ -10,6 +10,7 @@ class ChessPiece {
         Square placeAt; //The square where the piece is located
     public:
         virtual void Moves() = 0;
+        virtual void scan() = 0;
         virtual void pieceDeath() = 0;
 };
 

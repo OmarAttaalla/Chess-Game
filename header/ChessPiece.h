@@ -14,6 +14,7 @@ class ChessPiece {
         virtual void scan(std::vector<ChessPiece*> &Pieces) = 0; //function that scans available moves for the chess piece
         virtual void pieceDeath() = 0;
         bool get_color(){ return color;}
+        Square get_placeAt(){ return placeAt;}
 };
 
 #endif

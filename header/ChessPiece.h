@@ -11,8 +11,9 @@ class ChessPiece {
         Square placeAt; //The square where the piece is located
     public:
         virtual void Moves() = 0;
-        virtual void scan(std::vector<ChessPiece*> &Pieces) = 0;
+        virtual void scan(std::vector<ChessPiece*> &Pieces) = 0; //function that scans available moves for the chess piece
         virtual void pieceDeath() = 0;
+        bool get_color(){ return color;}
 };
 
 #endif

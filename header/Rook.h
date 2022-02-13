@@ -8,7 +8,7 @@ class Rook : public ChessPiece {
         
     public:
         virtual void Moves();
-        virtual void scan();
+        virtual void scan(std::vector<ChessPiece*> &Pieces);
         virtual void pieceDeath();
 };
 

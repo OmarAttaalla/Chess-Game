@@ -15,6 +15,7 @@ class ChessPiece {
         virtual void pieceDeath() = 0;
         bool get_color(){ return color;}
         Square get_placeAt(){ return placeAt;}
+        void add_move(Square newMove){ moveableSquares.push_back(newMove);} //adds move to moveableSquares vector
 };
 
 #endif

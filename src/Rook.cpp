@@ -10,7 +10,7 @@ void Rook::straightMove(bool d, int i, int pieceLocations[8][8]) {
         r += i; //move to next Square
     }
 
-    while (pieceLocations[c][r] == 0 && c < 63 && r < 63 && c >= 0 && r >= 0) { //Check if a piece exists at the Square location or if we passed the bounds of the Chess Board
+    while (pieceLocations[c][r] == 0 && c < 7 && r < 7 && c >= 0 && r >= 0) { //Check if a piece exists at the Square location or if we passed the bounds of the Chess Board
         Square newMove(r,c);
         this->add_move(newMove); //add the new square to the moveableSquares vector
         if (d) { // if we are moving through rows or columns, if d is true (increment column)

@@ -1,4 +1,4 @@
-#include "../header/knight.h"
+#include "../header/Knight.h"
 
 Knight::Knight(bool newColor, Square newPlaceAt) {
     color = newColor;
@@ -52,7 +52,7 @@ void Knight::scan() {
 }
 
 
-bool Knight::isMovable(int row, int col){
+bool Knight::isMoveable(int row, int col){
     // note to self: getSquare in chessBoard needs to check if input is out of bounds or not
     Square moveSquare = chessBoard.getSquare(row, col);
         

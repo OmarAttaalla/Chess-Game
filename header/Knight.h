@@ -11,9 +11,11 @@ class Knight : public ChessPiece {
         bool color;
 	Square placeAt;
 	vector<Square> moveableSquares;
+        
+	bool isMoveable(int, int);
     public:
         Knight(bool newColor, Square newPlaceAt);
-        void moves();
+        void moves(Square);
         void scan();
         void pieceDeath(); 
 };

@@ -32,6 +32,8 @@ TEST(RookTest, NoPiecesAround){
     for (int i = 0; i < moveableSquares.size(); ++i) {
         EXPECT_TRUE(find_square(moveableSquares.at(i), expectedSquares));
     }
+    
+    EXPECT_TRUE(expectedSquares.size() == moveableSquares.size());
 }
 
 #endif

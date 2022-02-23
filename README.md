@@ -57,12 +57,12 @@ Features:
   * Player is a class that represents a player. It stores what color the player is, the wins of the player, the losses of the player, and the draws of the player. Additionally, Player has a makeMove() function that is called when a player makes a move.
 * PlayerMoves
   * PlayerMoves stores a Square object for the beginningSquare of where a piece was and an endSquare of where the Piece was moved to. It will also store the ChessPiece that was moved.
-*ScanAlg
-  *ScanAlg is a class implemented using the Strategy Design Pattern(Strategy class). It is an abstract class that has one pure virtual function Scan().
-    *StraightScan
-      *StraightScan inherits from ScanAlg and implements the Scan method that represents the Straight Movement Algorithm.
-    *DiagonalScan
-      *DiagonalScan inherits from ScanAlg and implements the Scan method that represents the Diagonal Movement Algorithm.
+* ScanAlg
+  * ScanAlg is a class implemented using the Strategy Design Pattern(Strategy class). It is an abstract class that has one pure virtual function Scan().
+    * StraightScan
+      * StraightScan inherits from ScanAlg and implements the Scan method that represents the Straight Movement Algorithm.
+    * DiagonalScan
+      * DiagonalScan inherits from ScanAlg and implements the Scan method that represents the Diagonal Movement Algorithm.
 ## Design Pattern
 * The main design pattern we used is the Strategy Design Pattern. For the various moves of a chess piece, we decided it would be better to create Strategy class that includes all the different moves (Straight Moves, Diagonal Moves, etc.). Since many pieces use the same type of moves, such as the Queen using the Straight Move while the Rook also uses the Straight Move, using the strategy design pattern makes it so that the different Move Algorithms are not written multiple times. This will also make it much easier in the future, since adding new algorithms and editing an existing algorithm will only require the change of one method.
 

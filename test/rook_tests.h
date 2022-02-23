@@ -36,4 +36,71 @@ TEST(RookTest, NoPiecesAround){
     EXPECT_TRUE(expectedSquares.size() == moveableSquares.size());
 }
 
+TEST(RookTest, SurroundedOppositeColor) {
+    Square mainPlaceAt(4,4);
+    ChessPiece* mainRook = new Rook(true, mainPlaceAt);
+
+    Square s_1_placeAt(4,5);
+    ChessPiece* s_1 = new Rook(false, s_1_placeAt);
+
+    Square s_2_placeAt(5,4);
+    ChessPiece* s_2 = new Rook(false, s_2_placeAt);
+
+    Square s_3_placeAt(4,3);
+    ChessPiece* s_3 = new Rook(false, s_3_placeAt);
+
+    Square s_4_placeAt(3,4);
+    ChessPiece* s_4 = new Rook(false, s_4_placeAt);
+
+    std::vector<ChessPiece*> Pieces;
+    Pieces.push_back(mainRook);
+    Pieces.push_back(s_1);
+    Pieces.push_back(s_2);
+    Pieces.push_back(s_3);
+    Pieces.push_back(s_4);
+
+    mainRook->scan(Pieces);
+
+    std::vector<Square> moveableSquares = mainRook->get_moveableSquares(); //get the moveable squares that were just scanned
+
+    std::vector<std::vector<int>> expectedSquares = {{4,5}, {5,4}, {4,3}, {3,4}};
+
+    for (int i = 0; i < moveableSquares.size(); ++i) {
+        EXPECT_TRUE(find_square(moveableSquares.at(i), expectedSquares));
+    }
+    
+    EXPECT_TRUE(expectedSquares.size() == moveableSquares.size());
+}
+
+TEST(RookTest, SurroundedSameColor) {
+    Square mainPlaceAt(4,4);
+    ChessPiece* mainRook = new Rook(true, mainPlaceAt);
+
+    Square s_1_placeAt(4,5);
+    ChessPiece* s_1 = new Rook(true, s_1_placeAt);
+
+    Square s_2_placeAt(5,4);
+    ChessPiece* s_2 = new Rook(true, s_2_placeAt);
+
+    Square s_3_placeAt(4,3);
+    ChessPiece* s_3 = new Rook(true, s_3_placeAt);
+
+    Square s_4_placeAt(3,4);
+    ChessPiece* s_4 = new Rook(true, s_4_placeAt);
+
+    std::vector<ChessPiece*> Pieces;
+    Pieces.push_back(mainRook);
+    Pieces.push_back(s_1);
+    Pieces.push_back(s_2);
+    Pieces.push_back(s_3);
+    Pieces.push_back(s_4);
+
+    mainRook->scan(Pieces);
+
+    std::vector<Square> moveableSquares = mainRook->get_moveableSquares(); //get the moveable squares that were just scanned
+
+    EXPECT_TRUE(moveableSquares.size() == 0);
+    
+}
+
 #endif

@@ -24,7 +24,7 @@ void DiagonalScan::Scan(ChessPiece* chessPiece, int i, ChessBoard &Board) {
     c += inc; //move to the right or left
     r += u; //move up or down
 
-    while (Board.getSquare(r,c)->getPiece() == nullptr && c <= 7 && r <= 7 && c >= 0 && r >= 0) { //Check if a piece exists at the Square location or if we passed the bounds of the Chess Board
+    while (c <= 7 && r <= 7 && c >= 0 && r >= 0 && Board.getSquare(r,c)->getPiece() == nullptr) { //Check if a piece exists at the Square location or if we passed the bounds of the Chess Board
         chessPiece->add_move(Board.getSquare(r,c)); //add the new square to the moveableSquares vector
         
         c += inc; //move to the right or left

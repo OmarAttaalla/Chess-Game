@@ -2,22 +2,22 @@
 #define QUEEN_H
 
 #include "ChessPiece.h"
-#include "StraightMove.h"
-#include "DiagonalMove.h"
+#include "StraightScan.h"
+#include "DiagonalScan.h"
 
 class Queen : public ChessPiece {
     private:
-        MoveAlg* straightMove; //pointer to object that represents the movement algorithm needed for Rook (StraightMove alg)
-        MoveAlg* diagonalMove; //pointer to object that represents the movement algorithm needed for Rook (DiagonalMove alg)
+        ScanAlg* straightScan; //pointer to object that represents the movement algorithm needed for Rook (StraightMove alg)
+        ScanAlg* diagonalScan; //pointer to object that represents the movement algorithm needed for Rook (DiagonalMove alg)
     public:
-        Queen(bool newColor, Square newPlaceAt) {
+        Queen(bool newColor, Square* newPlaceAt) {
             set_color(newColor);
             set_placeAt(newPlaceAt);
-            straightMove = new StraightMove;
-            diagonalMove = new DiagonalMove;
+            straightScan = new StraightScan;
+            diagonalScan = new DiagonalScan;
         }
         virtual void Moves() {}
-        virtual void scan(std::vector<ChessPiece*> &Pieces);
+        virtual void scan(ChessBoard &Board);
         virtual void pieceDeath() {}
 };
 

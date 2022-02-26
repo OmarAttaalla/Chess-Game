@@ -1,6 +1,7 @@
 #ifndef QUEEN_H
 #define QUEEN_H
 
+#include "Square.h"
 #include "ChessPiece.h"
 #include "StraightScan.h"
 #include "DiagonalScan.h"

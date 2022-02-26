@@ -1,7 +1,6 @@
 #ifndef CHESSPIECE_H
 #define CHESSPIECE_H
 
-#include "Square.h"
 #include "ChessBoard.h"
 #include <vector>
 #include <iostream>

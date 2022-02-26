@@ -39,12 +39,17 @@ TEST(RookTest, SurroundedOppositeColor) {
     ChessBoard Board(true);
     
     ChessPiece* mainRook = new Rook(true, Board.getSquare(4,4));
+    Board.setSquare(mainRook, 4, 4);
 
   
     ChessPiece* s_1 = new Rook(false, Board.getSquare(4,5));
+    Board.setSquare(s_1, 4, 5);
     ChessPiece* s_2 = new Rook(false, Board.getSquare(5,4));
+    Board.setSquare(s_2, 5, 4);
     ChessPiece* s_3 = new Rook(false, Board.getSquare(4,3));
+    Board.setSquare(s_3, 4, 3);
     ChessPiece* s_4 = new Rook(false, Board.getSquare(3,4));
+    Board.setSquare(s_4, 3, 4);
 
 
     mainRook->scan(Board);
@@ -63,20 +68,18 @@ TEST(RookTest, SurroundedOppositeColor) {
 TEST(RookTest, SurroundedSameColor) {
     ChessBoard Board(true);
     
-    Square mainPlaceAt(4,4);
     ChessPiece* mainRook = new Rook(true, Board.getSquare(4,4));
+    Board.setSquare(mainRook, 4, 4);
 
-    Square s_1_placeAt(4,5);
+  
     ChessPiece* s_1 = new Rook(true, Board.getSquare(4,5));
-
-    Square s_2_placeAt(5,4);
+    Board.setSquare(s_1, 4, 5);
     ChessPiece* s_2 = new Rook(true, Board.getSquare(5,4));
-
-    Square s_3_placeAt(4,3);
+    Board.setSquare(s_2, 5, 4);
     ChessPiece* s_3 = new Rook(true, Board.getSquare(4,3));
-
-    Square s_4_placeAt(3,4);
+    Board.setSquare(s_3, 4, 3);
     ChessPiece* s_4 = new Rook(true, Board.getSquare(3,4));
+    Board.setSquare(s_4, 3, 4);
 
     mainRook->scan(Board);
 

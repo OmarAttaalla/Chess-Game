@@ -1,7 +1,7 @@
 #ifndef SQUARE_H
 #define SQUARE_H
 
-#include "ChessPiece.h"
+class ChessPiece;
 
 class Square {
     private:
@@ -10,7 +10,7 @@ class Square {
         ChessPiece* Piece;
     public:
         Square() {}
-        Square(int r, int c) { row = r; column = c; }
+        Square(int r, int c) { row = r; column = c; Piece = nullptr;}
     
         int get_row() {return row;}
         int get_column() {return column;}

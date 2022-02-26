@@ -2,20 +2,20 @@
 #define ROOK_H
 
 #include "ChessPiece.h"
-#include "StraightMove.h"
+#include "StraightScan.h"
 
 class Rook : public ChessPiece {
     private:
-        MoveAlg* straightMove; //pointer to object that represents the movement algorithm needed for Rook (StraightMove alg)
+        ScanAlg* straightScan; //pointer to object that represents the movement algorithm needed for Rook (StraightMove alg)
     public:
-        Rook(bool newColor, Square newPlaceAt) {
+        Rook(bool newColor, Square* newPlaceAt) {
             set_color(newColor);
             set_placeAt(newPlaceAt);
-            straightMove = new StraightMove;
+            straightScan = new StraightScan;
         }
-        virtual void Moves();
-        virtual void scan(std::vector<ChessPiece*> &Pieces);
-        virtual void pieceDeath(); 
+        virtual void Moves() {}
+        virtual void scan(ChessBoard &Board);
+        virtual void pieceDeath() {}
 };
 
 

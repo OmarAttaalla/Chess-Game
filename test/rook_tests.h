@@ -6,9 +6,9 @@
 #include "../header/Rook.h"
 
 
-bool find_square(Square f, std::vector<std::vector<int>> expectedSquares) {
+bool find_square(Square* f, std::vector<std::vector<int>> expectedSquares) {
     for (int i = 0; i < expectedSquares.size(); ++i) {
-        if (expectedSquares.at(i)[0] == f.get_row() && expectedSquares.at(i)[1] == f.get_column()) {
+        if (expectedSquares.at(i)[0] == f->get_row() && expectedSquares.at(i)[1] == f->get_column()) {
             return true;
         }
     }
@@ -17,15 +17,14 @@ bool find_square(Square f, std::vector<std::vector<int>> expectedSquares) {
 }
 
 TEST(RookTest, NoPiecesAround){
-    Square newPlaceAt(4,4);
-	ChessPiece* Rook1 = new Rook(true, newPlaceAt);
+    ChessBoard Board(true); //Creates empty board
 
-    std::vector<ChessPiece*> Pieces;
-    Pieces.push_back(Rook1);
+	ChessPiece* Rook1 = new Rook(true, Board.getSquare(4,4)); // create rook at 4,4
+    Board.setSquare(Rook1, 4, 4); // set the square to the chess piece
 
-    Rook1->scan(Pieces); //scan available moves
+    Rook1->scan(Board); //scan available moves
 
-    std::vector<Square> moveableSquares = Rook1->get_moveableSquares(); //get the moveable squares that were just scanned
+    std::vector<Square*> moveableSquares = Rook1->get_moveableSquares(); //get the moveable squares that were just scanned
 
     std::vector<std::vector<int>> expectedSquares = {{5,4},{6,4},{7,4},{4,5},{4,6},{4,7},{4,3},{4,2},{4,1},{4,0},{3,4},{2,4},{1,4},{0,4}};
     
@@ -37,31 +36,20 @@ TEST(RookTest, NoPiecesAround){
 }
 
 TEST(RookTest, SurroundedOppositeColor) {
-    Square mainPlaceAt(4,4);
-    ChessPiece* mainRook = new Rook(true, mainPlaceAt);
+    ChessBoard Board(true);
+    
+    ChessPiece* mainRook = new Rook(true, Board.getSquare(4,4));
 
-    Square s_1_placeAt(4,5);
-    ChessPiece* s_1 = new Rook(false, s_1_placeAt);
+  
+    ChessPiece* s_1 = new Rook(false, Board.getSquare(4,5));
+    ChessPiece* s_2 = new Rook(false, Board.getSquare(5,4));
+    ChessPiece* s_3 = new Rook(false, Board.getSquare(4,3));
+    ChessPiece* s_4 = new Rook(false, Board.getSquare(3,4));
 
-    Square s_2_placeAt(5,4);
-    ChessPiece* s_2 = new Rook(false, s_2_placeAt);
 
-    Square s_3_placeAt(4,3);
-    ChessPiece* s_3 = new Rook(false, s_3_placeAt);
+    mainRook->scan(Board);
 
-    Square s_4_placeAt(3,4);
-    ChessPiece* s_4 = new Rook(false, s_4_placeAt);
-
-    std::vector<ChessPiece*> Pieces;
-    Pieces.push_back(mainRook);
-    Pieces.push_back(s_1);
-    Pieces.push_back(s_2);
-    Pieces.push_back(s_3);
-    Pieces.push_back(s_4);
-
-    mainRook->scan(Pieces);
-
-    std::vector<Square> moveableSquares = mainRook->get_moveableSquares(); //get the moveable squares that were just scanned
+    std::vector<Square*> moveableSquares = mainRook->get_moveableSquares(); //get the moveable squares that were just scanned
 
     std::vector<std::vector<int>> expectedSquares = {{4,5}, {5,4}, {4,3}, {3,4}};
 
@@ -73,31 +61,26 @@ TEST(RookTest, SurroundedOppositeColor) {
 }
 
 TEST(RookTest, SurroundedSameColor) {
+    ChessBoard Board(true);
+    
     Square mainPlaceAt(4,4);
-    ChessPiece* mainRook = new Rook(true, mainPlaceAt);
+    ChessPiece* mainRook = new Rook(true, Board.getSquare(4,4));
 
     Square s_1_placeAt(4,5);
-    ChessPiece* s_1 = new Rook(true, s_1_placeAt);
+    ChessPiece* s_1 = new Rook(true, Board.getSquare(4,5));
 
     Square s_2_placeAt(5,4);
-    ChessPiece* s_2 = new Rook(true, s_2_placeAt);
+    ChessPiece* s_2 = new Rook(true, Board.getSquare(5,4));
 
     Square s_3_placeAt(4,3);
-    ChessPiece* s_3 = new Rook(true, s_3_placeAt);
+    ChessPiece* s_3 = new Rook(true, Board.getSquare(4,3));
 
     Square s_4_placeAt(3,4);
-    ChessPiece* s_4 = new Rook(true, s_4_placeAt);
+    ChessPiece* s_4 = new Rook(true, Board.getSquare(3,4));
 
-    std::vector<ChessPiece*> Pieces;
-    Pieces.push_back(mainRook);
-    Pieces.push_back(s_1);
-    Pieces.push_back(s_2);
-    Pieces.push_back(s_3);
-    Pieces.push_back(s_4);
+    mainRook->scan(Board);
 
-    mainRook->scan(Pieces);
-
-    std::vector<Square> moveableSquares = mainRook->get_moveableSquares(); //get the moveable squares that were just scanned
+    std::vector<Square*> moveableSquares = mainRook->get_moveableSquares(); //get the moveable squares that were just scanned
 
     EXPECT_TRUE(moveableSquares.size() == 0);
     

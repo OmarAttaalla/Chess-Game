@@ -5,17 +5,6 @@
 
 #include "../header/Queen.h"
 
-
-bool find_square(Square* f, std::vector<std::vector<int>> expectedSquares) {
-    for (int i = 0; i < expectedSquares.size(); ++i) {
-        if (expectedSquares.at(i)[0] == f->get_row() && expectedSquares.at(i)[1] == f->get_column()) {
-            return true;
-        }
-    }
-
-    return false;
-}
-
 TEST(QueenTest, NoPiecesAround){
     ChessBoard Board(true); //Creates empty board
 
@@ -76,7 +65,7 @@ TEST(QueenTest, SurroundedOppositeColor) {
 TEST(QueenTest, SurroundedSameColor) {
     ChessBoard Board(true);
     
-    ChessPiece* mainQueen = new Queen(true, Board.getSquare(4,4));
+    ChessPiece* mainQueen = new Queen(false, Board.getSquare(4,4));
     Board.setSquare(mainQueen, 4, 4);
 
   

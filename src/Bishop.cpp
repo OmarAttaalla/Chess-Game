@@ -6,12 +6,12 @@ Bishop::Bishop(bool newColor, Square* newPlaceAt) {
     diagonal = new DiagonalScan;
 }
 
-// input can be changed, depends on other classes. Maybe pointers?
-void Bishop::moves(Square sq) {
+
+void Bishop::moves(Square* sq) {
     scan();
     
     for(int i = 0, i < moveableSquares.length(), i++) {
-	if(placeAt.getRow() == moveableSquares.at(i).getRow() && placeAt.getColumn() == moveableSquares.at(i).getColumn()) {
+	if(moveableSquares.at(i) == sq) {
 	    placeAt = moveableSquares.at(i);
 	    moveableSquares.clear();
 	    return;
@@ -19,7 +19,6 @@ void Bishop::moves(Square sq) {
     }
 }
 
-// assume ChessBoard has double array, Square should have "getPiece"
 void Bishop::scan(Chessboard &Board) {
     diagonalScan->Scan(this, 0, Board);
     diagonalScan->Scan(this, 1, Board);
@@ -27,7 +26,7 @@ void Bishop::scan(Chessboard &Board) {
     diagonalScan->Scan(this, 3, Board);
 }
 
-// note to self: getSquare in chessBoard needs to check if input is out of bounds or not
+/*
 bool Bishop::isMoveable(int row, int col){
     Square moveSquare = chessBoard.getSquare(row, col);
         
@@ -35,4 +34,4 @@ bool Bishop::isMoveable(int row, int col){
         return false;
     } else
         return true;
-}
+} */

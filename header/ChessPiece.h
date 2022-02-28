@@ -23,6 +23,7 @@ class ChessPiece {
         void set_placeAt(Square* newPlaceAt) {placeAt = newPlaceAt;} 
         void add_move(Square* newMove){ moveableSquares.push_back(newMove);}
 	vector<Square*> get_moveableSquares() {return moveableSquares;}
+	void clear_moveableSquares() {moveableSquares.clear();}
 };
 
 #endif

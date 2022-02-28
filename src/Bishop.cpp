@@ -13,7 +13,7 @@ void Bishop::moves(Square* sq) {
     for(int i = 0, i < moveableSquares.length(), i++) {
 	if(moveableSquares.at(i) == sq) {
 	    placeAt = moveableSquares.at(i);
-	    moveableSquares.clear();
+	    clear_moveableSquares();
 	    return;
 	}
     }
@@ -25,13 +25,3 @@ void Bishop::scan(Chessboard &Board) {
     diagonalScan->Scan(this, 2, Board);
     diagonalScan->Scan(this, 3, Board);
 }
-
-/*
-bool Bishop::isMoveable(int row, int col){
-    Square moveSquare = chessBoard.getSquare(row, col);
-        
-    if(moveSquare.hasPiece && moveSquare.getPiece.getColor == this.getColor()) {        
-        return false;
-    } else
-        return true;
-} */

@@ -1,8 +1,9 @@
 #include "../header/Bishop.h"
 
-Bishop::Bishop(bool newColor, Square newPlaceAt) {
-    color = newColor;
-    placeAt = newPlaceAt;
+Bishop::Bishop(bool newColor, Square* newPlaceAt) {
+    set_color(newColor);
+    set_placeAt(newPlaceAt);
+    diagonal = new DiagonalScan;
 }
 
 // input can be changed, depends on other classes. Maybe pointers?
@@ -19,44 +20,11 @@ void Bishop::moves(Square sq) {
 }
 
 // assume ChessBoard has double array, Square should have "getPiece"
-void Bishop::scan() {
-    int x = 1;
-    int y = 1;
-        
-    while(isMoveable(placeAt.getRow() + x, placeAt.getColumn() + y)) {
-	moveableSquares.pushback(chessBoard.getSquare(placeAt.getRow() + x, placeAt.getColumn() + y));
-	x++;
-	y++;
-    }
-
-    x = -1;
-    y = -1;
-
-    while(isMoveable(placeAt.getRow() + x, placeAt.getColumn() + y)) {
-        moveableSquares.pushback(chessBoard.getSquare(placeAt.getRow() + x, placeAt.getColumn() + y));
-        x--;
-        y--;
-    }
-
-    x = -1;
-    y = 1;
-
-    while(isMoveable(placeAt.getRow() + x, placeAt.getColumn() + y)) {
-        moveableSquares.pushback(chessBoard.getSquare(placeAt.getRow() + x, placeAt.getColumn() + y));
-        x--;
-        y++;
-    }
-
-    x = 1;
-    y = -1;
-
-    while(isMoveable(placeAt.getRow() + x, placeAt.getColumn() + y)) {
-        moveableSquares.pushback(chessBoard.getSquare(placeAt.getRow() + x, placeAt.getColumn() + y));
-        x++;
-        y--;
-    }
-
-
+void Bishop::scan(Chessboard &Board) {
+    diagonalScan->Scan(this, 0, Board);
+    diagonalScan->Scan(this, 1, Board);
+    diagonalScan->Scan(this, 2, Board);
+    diagonalScan->Scan(this, 3, Board);
 }
 
 // note to self: getSquare in chessBoard needs to check if input is out of bounds or not

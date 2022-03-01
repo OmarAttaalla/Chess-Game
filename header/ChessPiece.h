@@ -14,7 +14,7 @@ class ChessPiece {
         vector<Square*> moveableSquares; //vector of Square moveable locations
         Square* placeAt; //The square where the piece is located
     public:
-        virtual void Moves() = 0;
+        virtual void moves() = 0;
         virtual void scan(ChessBoard &Board) = 0;
         virtual void pieceDeath() = 0;
         bool get_color(){ return color;}

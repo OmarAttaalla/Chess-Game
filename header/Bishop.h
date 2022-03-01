@@ -15,7 +15,7 @@ class Bishop : public ChessPiece {
 
     public:
         Bishop(bool newColor, Square* newPlaceAt);
-        void moves(Square);
+        void moves(Square* sq);
         void scan(ChessBoard &Board);
         void pieceDeath(); 
 };

@@ -17,7 +17,7 @@ class Queen : public ChessPiece {
             straightScan = new StraightScan;
             diagonalScan = new DiagonalScan;
         }
-        virtual void Moves() {}
+        virtual void moves(Square* sq) {}
         virtual void scan(ChessBoard &Board);
         virtual void pieceDeath() {}
 };

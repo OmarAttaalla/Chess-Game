@@ -8,16 +8,15 @@ using namespace std;
 
 class Bishop : public ChessPiece {
     private:
-	Square* placeAt;
-	vector<Square*> moveableSquares;
-	ScanAlg* diagonal;        
-	//bool isMoveable(int, int);
+        Square* placeAt;
+        vector<Square*> moveableSquares;
+        ScanAlg* diagonal;        
 
     public:
         Bishop(bool newColor, Square* newPlaceAt);
-        void moves(Square* sq);
-        void scan(ChessBoard &Board);
-        void pieceDeath(); 
+        virtual void moves(Square* sq);
+        virtual void scan(ChessBoard &Board);
+        virtual void pieceDeath(); 
 };
 
 

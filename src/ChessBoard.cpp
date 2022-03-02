@@ -2,9 +2,9 @@
 
 #include "../header/Rook.h"
 #include "../header/Queen.h"
-// #include "../header/Knight.h"
-// #include "../header/Bishop.h"
-// #include "../header/King.h"
+#include "../header/Knight.h"
+#include "../header/Bishop.h"
+// #include "../header/King.h" //uncomment once king is implemented
 
 ChessBoard::ChessBoard(bool t){
     for (int i = 0; i < 8; ++i) {
@@ -41,9 +41,9 @@ ChessBoard::ChessBoard() {
                     newPiece = new Rook(sideColor, newSquare);
 
                 } else if (g == 1 || g == 6) {
-                    //newPiece = new Knight(sideColor, newSquare); //create Knight
+                    newPiece = new Knight(sideColor, newSquare); //create Knight
                 } else if (g == 2 || g == 5) {
-                    //newPiece = new Bishop(sideColor, newSquare); //create Bishop
+                    newPiece = new Bishop(sideColor, newSquare); //create Bishop
                 } else if (g == 3) {
                     newPiece = new Queen(sideColor, newSquare); //create queen
                 } else if (g == 4) {

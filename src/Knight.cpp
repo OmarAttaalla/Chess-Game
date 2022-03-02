@@ -7,10 +7,8 @@ Knight::Knight(bool newColor, Square* newPlaceAt) {
 }
 
 
-void Knight::moves(Square* sq) {
-    scan();
-    
-    for(int i = 0, i < moveableSquares.length(), i++) {
+void Knight::moves(Square* sq) {    
+    for(int i = 0; i < moveableSquares.size(); i++) {
 	if(moveableSquares.at(i) == sq) {
 	    placeAt = moveableSquares.at(i);
 	    clear_moveableSquares();

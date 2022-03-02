@@ -31,7 +31,7 @@ Features:
   * Animations for Chess pieces when moving
 
 ## Class Diagram
-![UML Diagram (2)](https://user-images.githubusercontent.com/51334912/153480178-6e3432b9-73a2-4557-8629-76c9174a3a3d.png)
+![UML Diagram (3)](https://user-images.githubusercontent.com/51334912/155409991-dd7555f3-43f9-4700-a321-74ac01e69200.png)
 * ChessBoard
   * ChessBoard is a class that encapsulates a list of squares and a list of setPieces. It includes an InitialCreate() function which initializes 2 SetPieces objects and a list of 64 Squares.
   * SetPieces
@@ -57,24 +57,15 @@ Features:
   * Player is a class that represents a player. It stores what color the player is, the wins of the player, the losses of the player, and the draws of the player. Additionally, Player has a makeMove() function that is called when a player makes a move.
 * PlayerMoves
   * PlayerMoves stores a Square object for the beginningSquare of where a piece was and an endSquare of where the Piece was moved to. It will also store the ChessPiece that was moved.
- 
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with a reader (using Calendly). Your entire team must be present. This meeting will occur on week 8 but NOT during lab time.
- > * Before the meeting you should perform a sprint plan like you did in Phase II.
- > * You should also update this README file by adding the following:
- >   * What design pattern(s) did you use? For each pattern you must explain in 4-5 sentences:
- >     * Why did you pick this pattern? And what feature did you implement with it?
- >     * How did the design pattern help you write better code?
- >   * An updated class diagram that reflects the design pattern(s) you used. You may combine multiple design patterns into one diagram if you'd like, but it needs to be clear which portion of the diagram represents which design pattern (either in the diagram or in the description).
- >   * Make sure your README file (and Project board) are up-to-date reflecting the current status of your project. Previous versions of the README file should still be visible through your commit history.
-> 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
+* ScanAlg
+  * ScanAlg is a class implemented using the Strategy Design Pattern(Strategy class). It is an abstract class that has one pure virtual function Scan().
+    * StraightScan
+      * StraightScan inherits from ScanAlg and implements the Scan method that represents the Straight Movement Algorithm.
+    * DiagonalScan
+      * DiagonalScan inherits from ScanAlg and implements the Scan method that represents the Diagonal Movement Algorithm.
+## Design Pattern
+* The main design pattern we used is the Strategy Design Pattern. For the various moves of a chess piece, we decided it would be better to create Strategy class that includes all the different moves (Straight Moves, Diagonal Moves, etc.). Since many pieces use the same type of moves, such as the Queen using the Straight Move while the Rook also uses the Straight Move, using the strategy design pattern makes it so that the different Move Algorithms are not written multiple times. This will also make it much easier in the future, since adding new algorithms and editing an existing algorithm will only require the change of one method.
 
- 
  > ## Final deliverable
  > All group members will give a demo to the TA/reader during lab time. The TA/reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
  > Before the demo, you should do the following:

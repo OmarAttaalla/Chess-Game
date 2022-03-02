@@ -1,5 +1,5 @@
-#ifndef DIAGONALMOVE_H
-#define DIAGONALMOVE_H
+#ifndef DIAGONALSCAN_H
+#define DIAGONALSCAN_H
 
 #include "ScanAlg.h"
 

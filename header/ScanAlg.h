@@ -1,5 +1,5 @@
-#ifndef MOVEALG_H
-#define MOVEALG_H
+#ifndef SCANALG_H
+#define SCANALG_H
 
 #include "ChessPiece.h"
 

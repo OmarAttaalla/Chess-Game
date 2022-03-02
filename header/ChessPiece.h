@@ -19,7 +19,7 @@ class ChessPiece {
         Square* get_placeAt(){ return placeAt;}
         void set_placeAt(Square* newPlaceAt) {placeAt = newPlaceAt;} //Set the square where the piece is located
         void add_move(Square* newMove){ moveableSquares.push_back(newMove);} //adds move to moveableSquares vector
-        vector<Square*> get_moveableSquares() {return moveableSquares;}
+        std::vector<Square*> get_moveableSquares() {return moveableSquares;}
         void clear_moveableSquares() {moveableSquares.clear();}
 };
 

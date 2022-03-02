@@ -6,11 +6,6 @@ class ChessBoard; //forward declare ChessBoard
 #include "Square.h"
 #include "ChessPiece.h"
 #include <vector>
-#include "Rook.h"
-#include "Queen.h"
-#include "Knight.h"
-#include "Bishop.h"
-// #include "King.h" //uncomment once King is implemented
 
 
 class ChessBoard {

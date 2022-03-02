@@ -10,8 +10,11 @@ ADD_EXECUTABLE(test
 	src/ChessBoard.cpp
 	src/Rook.cpp
 	src/Queen.cpp
+	src/Knight.cpp
+	src/Bishop.cpp
 	src/StraightScan.cpp
 	src/DiagonalScan.cpp
+	src/KnightScan.cpp
 )
 
 

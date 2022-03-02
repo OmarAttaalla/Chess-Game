@@ -7,10 +7,8 @@ Bishop::Bishop(bool newColor, Square* newPlaceAt) {
 }
 
 
-void Bishop::moves(Square* sq) {
-    scan();
-    
-    for(int i = 0, i < moveableSquares.length(), i++) {
+void Bishop::moves(Square* sq) {    
+    for(int i = 0; i < moveableSquares.size(); i++) {
 	if(moveableSquares.at(i) == sq) {
 	    placeAt = moveableSquares.at(i);
 	    clear_moveableSquares();
@@ -19,9 +17,9 @@ void Bishop::moves(Square* sq) {
     }
 }
 
-void Bishop::scan(Chessboard &Board) {
-    diagonalScan->Scan(this, 0, Board);
-    diagonalScan->Scan(this, 1, Board);
-    diagonalScan->Scan(this, 2, Board);
-    diagonalScan->Scan(this, 3, Board);
+void Bishop::scan(ChessBoard &Board) {
+    diagonal->Scan(this, 0, Board);
+    diagonal->Scan(this, 1, Board);
+    diagonal->Scan(this, 2, Board);
+    diagonal->Scan(this, 3, Board);
 }

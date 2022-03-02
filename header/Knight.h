@@ -2,21 +2,19 @@
 #define KNIGHT_H
 
 #include "ChessPiece.h"
-#include "DiagonalScan.h"
+#include "KnightScan.h"
 
-
-using namespace std;
 
 class Knight : public ChessPiece {
     private:
         Square* placeAt;
-        vector<Square*> moveableSquares;
+        std::vector<Square*> moveableSquares;
         ScanAlg* movement;
     public:
         Knight(bool newColor, Square* newPlaceAt);
         virtual void moves(Square* sq);
-        virtual void scan(Chessboard &Board);
-        virtual void pieceDeath(); 
+        virtual void scan(ChessBoard &Board);
+        virtual void pieceDeath() {}
 };
 
 

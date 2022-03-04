@@ -7,6 +7,6 @@ void King::scan(ChessBoard &Board) {
     }
 }
 
-bool King::checkScan(ChessBoard &Board, King* piece) {
+bool King::checkScan(ChessBoard &Board) {
     ///traverse list of opposite color pieces, call scan and check if the Kings location is a moveableSquare
 }

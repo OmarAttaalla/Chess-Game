@@ -16,6 +16,7 @@ class King : public ChessPiece {
         virtual void moves(Square* sq) {}
         virtual void scan(ChessBoard &Board);
         virtual void pieceDeath() {}
+        bool checkScan(ChessBoard &Board, King* piece); //checks if the king would be in check (piece refers to the king object, would be "this" if it was this king)
 };
 
 

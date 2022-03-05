@@ -5,7 +5,7 @@
 
 class KnightScan : public ScanAlg {
     public:
-	virtual void Scan(ChessPiece* chessPiece, int i, ChessBoard &Board);
+	    virtual void Scan(ChessPiece* chessPiece, int i, ChessBoard &Board);
 };
 
 

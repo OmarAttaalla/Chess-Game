@@ -7,10 +7,8 @@ Knight::Knight(bool newColor, Square* newPlaceAt) {
 }
 
 
-void Knight::moves(Square* sq) {
-    scan();
-    
-    for(int i = 0, i < moveableSquares.length(), i++) {
+void Knight::moves(Square* sq) {    
+    for(int i = 0; i < moveableSquares.size(); i++) {
 	if(moveableSquares.at(i) == sq) {
 	    placeAt = moveableSquares.at(i);
 	    clear_moveableSquares();
@@ -19,14 +17,14 @@ void Knight::moves(Square* sq) {
     }
 }
 
-void Knight::scan(Chessboard &Board) {
-    KnightScan->Scan(this, 0, Board);
-    KnightScan->Scan(this, 1, Board);
-    KnightScan->Scan(this, 2, Board);
-    KnightScan->Scan(this, 3, Board);
-    KnightScan->Scan(this, 4, Board);
-    KnightScan->Scan(this, 5, Board);
-    KnightScan->Scan(this, 6, Board);
-    KnightScan->Scan(this, 7, Board);
+void Knight::scan(ChessBoard &Board) {
+    movement->Scan(this, 0, Board);
+    movement->Scan(this, 1, Board);
+    movement->Scan(this, 2, Board);
+    movement->Scan(this, 3, Board);
+    movement->Scan(this, 4, Board);
+    movement->Scan(this, 5, Board);
+    movement->Scan(this, 6, Board);
+    movement->Scan(this, 7, Board);
 }
 

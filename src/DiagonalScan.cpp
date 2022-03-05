@@ -34,8 +34,4 @@ void DiagonalScan::Scan(ChessPiece* chessPiece, int i, ChessBoard &Board) {
     if (c <= 7 && r <= 7 && c >= 0 && r >= 0 && Board.getSquare(r,c)->getPiece()->get_color() != chessPiece->get_color()) { //if the piece at the Square we stopped at is white and our color is black then add the move to the moveableSquares vector
         chessPiece->add_move(Board.getSquare(r,c)); //add the new square to the moveableSquares vector
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> ELW123/bishop-movement

@@ -5,18 +5,16 @@
 #include "KnightScan.h"
 
 
-using namespace std;
-
 class Knight : public ChessPiece {
     private:
-	Square* placeAt;
-	vector<Square*> moveableSquares;
+        Square* placeAt;
+        std::vector<Square*> moveableSquares;
         ScanAlg* movement;
     public:
         Knight(bool newColor, Square* newPlaceAt);
-        void moves(Square* sq);
-        void scan(Chessboard &Board);
-        void pieceDeath(); 
+        virtual void moves(Square* sq);
+        virtual void scan(ChessBoard &Board);
+        virtual void pieceDeath() {}
 };
 
 

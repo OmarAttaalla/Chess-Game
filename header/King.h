@@ -17,6 +17,7 @@ class King : public ChessPiece {
         virtual void scan(ChessBoard &Board);
         virtual void pieceDeath() {}
         bool checkScan(ChessBoard &Board); //checks if the king would be in check 
+        bool checkMoves(const std::vector<Square*> &v,ChessBoard &Board); //helper function that traverses moves list v and checks if a move is the kings location
 };
 
 

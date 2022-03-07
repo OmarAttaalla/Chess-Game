@@ -4,7 +4,15 @@
 #include "../header/Queen.h"
 #include "../header/Knight.h"
 #include "../header/Bishop.h"
-// #include "../header/King.h" //uncomment once king is implemented
+#include "../header/King.h"
+
+std::vector<ChessPiece*> ChessBoard::get_pieces(bool color) {
+    if (color) {
+        return whitePieces;
+    }
+
+    return blackPieces;
+}
 
 ChessBoard::ChessBoard(bool t){
     for (int i = 0; i < 8; ++i) {
@@ -25,11 +33,15 @@ ChessBoard::ChessBoard() {
             Square* newSquare = new Square(i,g);
             rows.push_back(newSquare);
 
+            std::vector<ChessPiece*>* PieceSet;
+
             bool sideColor;
             if (i == 0 || i == 1) { //Check if we are creating white or black pieces
                 sideColor = true;
+                PieceSet = &whitePieces;
             } else {
                 sideColor = false;
+                PieceSet = &blackPieces;
             }
 
             if (i == 1 || i == 6) {
@@ -47,10 +59,11 @@ ChessBoard::ChessBoard() {
                 } else if (g == 3) {
                     newPiece = new Queen(sideColor, newSquare); //create queen
                 } else if (g == 4) {
-                    //newPiece = new King(sideColor, newSquare); // create King
+                    newPiece = new King(sideColor, newSquare); // create King
                 }
 
                 newSquare->setPiece(newPiece);
+                PieceSet->push_back(newPiece);
             }
         }
         squares.push_back(rows);

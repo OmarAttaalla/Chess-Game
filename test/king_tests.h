@@ -135,4 +135,40 @@ TEST (KingTest, checkScanNotInCheck) {
     EXPECT_FALSE(mainKing->checkScan(Board));
 }
 
+TEST(KingTest, checkmateSurroundedInCheckMate) {
+    ChessBoard Board(true);
+    
+    King* mainKing = new King(false, Board.getSquare(0,7));
+    Board.setSquare(mainKing, 0, 7);
+
+    ChessPiece* enemyBishop = new Bishop(true, Board.getSquare(3,4));
+    Board.setSquare(enemyBishop, 3, 4);
+
+    ChessPiece* newBishop1 = new Bishop(false, Board.getSquare(0,6));
+    Board.setSquare(newBishop1, 0, 6);
+
+    ChessPiece* newBishop2 = new Bishop(false, Board.getSquare(1,7));
+    Board.setSquare(newBishop1, 1, 7);
+
+    EXPECT_TRUE(mainKing->checkmate(Board));
+}
+
+TEST(KingTest, checkmateOnlyInCheck) {
+    ChessBoard Board(true);
+    
+    King* mainKing = new King(false, Board.getSquare(0,7));
+    Board.setSquare(mainKing, 0, 7);
+
+    ChessPiece* enemyBishop = new Bishop(true, Board.getSquare(3,4));
+    Board.setSquare(enemyBishop, 3, 4);
+
+    ChessPiece* newBishop1 = new Bishop(false, Board.getSquare(0,6));
+    Board.setSquare(newBishop1, 0, 6);
+
+    ChessPiece* newBishop2 = new Rook(false, Board.getSquare(1,7));
+    Board.setSquare(newBishop1, 1, 7);
+
+    EXPECT_FALSE(mainKing->checkmate(Board));
+}
+
 #endif

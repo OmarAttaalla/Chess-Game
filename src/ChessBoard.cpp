@@ -14,6 +14,16 @@ std::vector<ChessPiece*> ChessBoard::get_pieces(bool color) {
     return blackPieces;
 }
 
+void ChessBoard::addPiece(ChessPiece* newPiece) {
+    if (newPiece == nullptr){return;}
+
+    if (newPiece->get_color()) {
+        whitePieces.push_back(newPiece);
+    } else {
+        blackPieces.push_back(newPiece);
+    }
+}
+
 ChessBoard::ChessBoard(bool t){
     for (int i = 0; i < 8; ++i) {
         std::vector<Square*> rows;

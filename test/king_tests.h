@@ -140,15 +140,19 @@ TEST(KingTest, checkmateSurroundedInCheckMate) {
     
     King* mainKing = new King(false, Board.getSquare(0,7));
     Board.setSquare(mainKing, 0, 7);
+    Board.addPiece(mainKing);
 
     ChessPiece* enemyBishop = new Bishop(true, Board.getSquare(3,4));
     Board.setSquare(enemyBishop, 3, 4);
+    Board.addPiece(enemyBishop);
 
     ChessPiece* newBishop1 = new Bishop(false, Board.getSquare(0,6));
     Board.setSquare(newBishop1, 0, 6);
+    Board.addPiece(newBishop1);
 
     ChessPiece* newBishop2 = new Bishop(false, Board.getSquare(1,7));
-    Board.setSquare(newBishop1, 1, 7);
+    Board.setSquare(newBishop2, 1, 7);
+    Board.addPiece(newBishop2);
 
     EXPECT_TRUE(mainKing->checkmate(Board));
 }
@@ -158,15 +162,19 @@ TEST(KingTest, checkmateOnlyInCheck) {
     
     King* mainKing = new King(false, Board.getSquare(0,7));
     Board.setSquare(mainKing, 0, 7);
+    Board.addPiece(mainKing);
 
     ChessPiece* enemyBishop = new Bishop(true, Board.getSquare(3,4));
     Board.setSquare(enemyBishop, 3, 4);
+    Board.addPiece(enemyBishop);
 
     ChessPiece* newBishop1 = new Bishop(false, Board.getSquare(0,6));
     Board.setSquare(newBishop1, 0, 6);
+    Board.addPiece(newBishop1);
 
     ChessPiece* newBishop2 = new Rook(false, Board.getSquare(1,7));
-    Board.setSquare(newBishop1, 1, 7);
+    Board.setSquare(newBishop2, 1, 7);
+    Board.addPiece(newBishop2);
 
     EXPECT_FALSE(mainKing->checkmate(Board));
 }

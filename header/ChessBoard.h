@@ -11,14 +11,18 @@ class ChessBoard; //forward declare ChessBoard
 class ChessBoard {
    private:
        std::vector<std::vector<Square*>> squares;
+       std::vector<ChessPiece*> whitePieces;
+       std::vector<ChessPiece*> blackPieces;
    public:
        //for testing purposes (Creates board with no pieces)
        ChessBoard(bool t);
        ChessBoard();
 
+       std::vector<ChessPiece*> get_pieces(bool color);
+
        //for testing purposes (Sets the Piece in the Square to the requests ChessPiece)
        void setSquare(ChessPiece* newPiece, int row, int column);
-      
+       void addPiece(ChessPiece* newPiece);
        Square* getSquare(int row, int column);
 };
 

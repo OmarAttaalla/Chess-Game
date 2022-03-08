@@ -7,6 +7,7 @@ SET(CMAKE_CXX_STANDARD 11)
 
 ADD_EXECUTABLE(test
 	unit_tests.cpp
+	src/ChessPiece.cpp
 	src/ChessBoard.cpp
 	src/Rook.cpp
 	src/Queen.cpp

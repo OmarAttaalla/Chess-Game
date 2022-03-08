@@ -77,6 +77,12 @@ Features:
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  > Instructions on installing and running your application
+ * Window Users:
+   * To run our program you need to download and install QT
+   * Clone this repository
+   * Open QT, click on open project, and click on the CMakeLists.txt file attached to the project
+   * Once CMake has ran the main menu window should be ready to start a game or quit and exit the game.
+ > 
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  

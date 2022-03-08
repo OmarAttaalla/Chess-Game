@@ -75,6 +75,7 @@ Features:
  
  ## Screenshots
  > Screenshots of the input/output after running your application
+ ![MainMenu](https://user-images.githubusercontent.com/51334912/157161168-30fdc432-3288-40fd-baaa-855b9f05ae82.png)
  ## Installation/Usage
  > Instructions on installing and running your application
  * Window Users:

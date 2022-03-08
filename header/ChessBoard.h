@@ -23,6 +23,7 @@ class ChessBoard {
        //for testing purposes (Sets the Piece in the Square to the requests ChessPiece)
        void setSquare(ChessPiece* newPiece, int row, int column);
        void addPiece(ChessPiece* newPiece);
+       void removePiece(ChessPiece* newPiece);
        Square* getSquare(int row, int column);
 };
 

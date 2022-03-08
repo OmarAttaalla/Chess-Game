@@ -24,6 +24,29 @@ void ChessBoard::addPiece(ChessPiece* newPiece) {
     }
 }
 
+void ChessBoard::removePiece(ChessPiece* newPiece) {
+    if (newPiece == nullptr) {return;}
+
+    if (newPiece->get_color()) {
+        for (int i =0; i < whitePieces.size(); ++i) {
+            if (whitePieces.at(i) == newPiece) {
+                whitePieces.erase(whitePieces.begin() + i);
+                break;
+            }
+        }
+    } else {
+        for (int i =0; i < blackPieces.size(); ++i) {
+            if (blackPieces.at(i) == newPiece) {
+                blackPieces.erase(blackPieces.begin() + i);
+                break;
+            }
+        }
+    }
+
+    newPiece->get_placeAt()->setPiece(nullptr);
+    delete newPiece;
+}
+
 ChessBoard::ChessBoard(bool t){
     for (int i = 0; i < 8; ++i) {
         std::vector<Square*> rows;

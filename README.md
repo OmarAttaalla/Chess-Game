@@ -79,7 +79,7 @@ Features:
  ![ChessBoard](https://user-images.githubusercontent.com/51334912/157161263-07365a85-9952-4424-9bef-8a2d54ea6c5e.png)
  ## Installation/Usage
  > Instructions on installing and running your application
- * Window Users:
+ * Windows Users:
    * To run our program you need to download and install QT
    * Clone this repository
    * Open QT, click on open project, and click on the CMakeLists.txt file attached to the project

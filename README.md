@@ -49,8 +49,6 @@ Features:
   * Game is a class that stores a list of PlayerMoves, who’s turn it is, the players, and the state of the game. Additionally, it has a create() function which initializes a game. An addMove() function adds the player’s moves to the list of PlayerMoves and a gameEnd() function ends the game.
 * MainMenu
   * MainMenu is a class that allows a user to start, resume, or quit a game. 
-* Loading
-  * Loading is a class that determines whether or not the game is set up by means of the loadState variable and switches to the chess board via the nextScene() function.
 * InGame
   * InGame is a class that gives the player the option of saving, undoing, or quitting the game.
 * Player

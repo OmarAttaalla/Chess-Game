@@ -22,6 +22,8 @@ TEST(QueenTest, NoPiecesAround){
     }
     
     EXPECT_TRUE(expectedSquares.size() == moveableSquares.size());
+
+    delete Queen1;
 }
 
 TEST(QueenTest, SurroundedOppositeColor) {
@@ -60,6 +62,16 @@ TEST(QueenTest, SurroundedOppositeColor) {
     }
     
     EXPECT_TRUE(expectedSquares.size() == moveableSquares.size());
+
+    delete mainQueen;
+    delete s_1;
+    delete s_2;
+    delete s_3;
+    delete s_4;
+    delete s_5;
+    delete s_6;
+    delete s_7;
+    delete s_8;
 }
 
 TEST(QueenTest, SurroundedSameColor) {
@@ -92,6 +104,15 @@ TEST(QueenTest, SurroundedSameColor) {
 
     EXPECT_TRUE(moveableSquares.size() == 0);
     
+    delete mainQueen;
+    delete s_1;
+    delete s_2;
+    delete s_3;
+    delete s_4;
+    delete s_5;
+    delete s_6;
+    delete s_7;
+    delete s_8;
 }
 
 #endif

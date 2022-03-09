@@ -92,13 +92,7 @@ ChessBoard::ChessBoard() {
                 } else if (g == 3) {
                     newPiece = new Queen(sideColor, newSquare); //create queen
                 } else if (g == 4) {
-                    King* newKing = new King(sideColor, newSquare);// create King
-                    newPiece = newKing;
-                    if (sideColor) {
-                        whiteKing = newKing;
-                    } else {
-                        blackKing = newKing;
-                    }
+                    newPiece = new King(sideColor, newSquare);// create King
                 }
 
                 newSquare->setPiece(newPiece);

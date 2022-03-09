@@ -2,8 +2,10 @@
 #define INGAME_H
 
 #include <QMainWindow>
-
 #include "ui_ingame.h"
+#include "movement/ChessBoard.h"
+#include "Menu/mainwindow.h"
+#include "movement/King.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class InGame; }
@@ -16,11 +18,12 @@ class InGame : public QMainWindow
 public:
     InGame(QWidget *parent = nullptr);
     ~InGame();
+
     void board();
     void black_pieces();
     void white_pieces();
-
-    void buttonEvents();
+    void turnChanger();
+    void gameState(King *);
 
     QLabel *pieceTypeSearch(const QPushButton *);
     QLabel *pawnSearch(const QPushButton *);
@@ -29,14 +32,9 @@ public:
     QLabel *bishopSearch(const QPushButton *);
     QLabel *queenSearch(const QPushButton *);
     QLabel *kingSearch(const QPushButton *);
+    QLabel *pieceTypeMatch(const QPushButton *, QLabel *);
 
-    void pieceTypeMove(const QPushButton *);
-    void pawnMove(const QPushButton *);
-    void rookMove(const QPushButton *);
-    void knightMove(const QPushButton *);
-    void bishopMove(const QPushButton *);
-    void queenMove(const QPushButton *);
-    void kingMove(const QPushButton *);
+    void move(const QPushButton *);
 
     void on_clicked(const QPushButton *);
 
@@ -113,9 +111,15 @@ private slots:
     void on_h7_clicked();
     void on_h8_clicked();
 
+    void on_mainMenu_clicked();
+
 private:
     Ui::InGame *ui;
     bool moving = false;
     QLabel *currentPiece = 0;
+    ChessBoard cb;
+    ChessPiece *cp;
+    bool turn = true;
+    bool stop = false;
 };
 #endif // INGAME_H

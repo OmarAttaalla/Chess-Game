@@ -46,7 +46,7 @@ Features:
 * MainMenu
   * MainMenu is a class that allows a user to start or quit a game. 
 * InGame
-  * InGame is a class that stores a list of PlayerMoves, who’s turn it is, the players, and the state of the game. Additionally, it has a create() function which initializes a game. An addMove() function adds the player’s moves to the list of PlayerMoves and a gameEnd() function ends the game.
+  * InGame is a class that stores a list of PlayerMoves, who’s turn it is, the players, and the state of the game. Additionally, it has a board() function which initializes a game. An on_clicked() function which makes the pieces/squares on the board clickable. 
 * ScanAlg
   * ScanAlg is a class implemented using the Strategy Design Pattern(Strategy class). It is an abstract class that has one pure virtual function Scan().
     * StraightScan

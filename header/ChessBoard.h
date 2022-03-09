@@ -13,11 +13,13 @@ class ChessBoard {
        std::vector<std::vector<Square*>> squares;
        std::vector<ChessPiece*> whitePieces;
        std::vector<ChessPiece*> blackPieces;
+       King* whiteKing;
+       King* blackKing;
    public:
        //for testing purposes (Creates board with no pieces)
        ChessBoard(bool t);
        ChessBoard();
-
+       ~ChessBoard();
        std::vector<ChessPiece*> get_pieces(bool color);
 
        //for testing purposes (Sets the Piece in the Square to the requests ChessPiece)

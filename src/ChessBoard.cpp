@@ -5,6 +5,7 @@
 #include "../header/Knight.h"
 #include "../header/Bishop.h"
 #include "../header/King.h"
+#include "../header/Pawn.h"
 
 std::vector<ChessPiece*> ChessBoard::get_pieces(bool color) {
     if (color) {
@@ -78,8 +79,8 @@ ChessBoard::ChessBoard() {
             }
 
             if (i == 1 || i == 6) {
-                // ChessPiece* newPiece = new Pawn; //create pawn
-                //newSquare->setPiece(newPiece);
+                ChessPiece* newPiece = new Pawn; //create pawn
+                newSquare->setPiece(newPiece);
             } else if (i == 0 || i == 7) {
                 ChessPiece* newPiece;
                 if (g == 0 || g == 7) { //add rooks

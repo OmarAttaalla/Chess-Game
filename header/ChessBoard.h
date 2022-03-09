@@ -5,6 +5,7 @@ class ChessBoard; //forward declare ChessBoard
 
 #include "Square.h"
 #include "ChessPiece.h"
+#include "King.h"
 #include <vector>
 
 

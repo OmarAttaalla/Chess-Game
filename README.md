@@ -22,11 +22,9 @@ Input will always be mouse click. Output will be either the movement of a chess 
 Features:
 * Must have:
   * 2-player Chess game
-  * Option to undo moves
   * Main menu
   * Functioning GUI to display the board and its pieces
 * Want to have:
-  * Saving and loading game
   * Display possible places to move after Chess piece selected
   * Animations for Chess pieces when moving
 
@@ -45,12 +43,10 @@ Features:
   * Pawn
     * Pawn is a subclass of ChessPiece and encapsulates an initialMove attribute that checks if the pawn was moved before or not. Pawn has a separate attack function as it’s move and attack are separate in game. Additionally, Pawn has a unique “transform” function that lets it transform into another piece if it reaches the other side of the board
   * Queen, Rook, Knight, and Bishop only differ in their move function; they have no unique functions outside of ChessPiece
-* Game
-  * Game is a class that stores a list of PlayerMoves, who’s turn it is, the players, and the state of the game. Additionally, it has a create() function which initializes a game. An addMove() function adds the player’s moves to the list of PlayerMoves and a gameEnd() function ends the game.
 * MainMenu
-  * MainMenu is a class that allows a user to start, resume, or quit a game. 
+  * MainMenu is a class that allows a user to start or quit a game. 
 * InGame
-  * InGame is a class that gives the player the option of saving, undoing, or quitting the game.
+  * InGame is a class that stores a list of PlayerMoves, who’s turn it is, the players, and the state of the game. Additionally, it has a create() function which initializes a game. An addMove() function adds the player’s moves to the list of PlayerMoves and a gameEnd() function ends the game.
 * Player
   * Player is a class that represents a player. It stores what color the player is, the wins of the player, the losses of the player, and the draws of the player. Additionally, Player has a makeMove() function that is called when a player makes a move.
 * PlayerMoves

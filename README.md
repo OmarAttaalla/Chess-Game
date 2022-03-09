@@ -65,7 +65,7 @@ Features:
  
  ## Screenshots
  > Screenshots of the input/output after running your application
- ![MainMenu](https://user-images.githubusercontent.com/51334912/157161168-30fdc432-3288-40fd-baaa-855b9f05ae82.png)
+ ![ChessBoard(1)](https://user-images.githubusercontent.com/51334912/157558719-4083bb40-f9ee-4c35-8a88-4f8da4ef8d55.png)
  ![ChessBoard](https://user-images.githubusercontent.com/51334912/157161263-07365a85-9952-4424-9bef-8a2d54ea6c5e.png)
  ## Installation/Usage
  > Instructions on installing and running your application

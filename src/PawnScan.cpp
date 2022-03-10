@@ -10,15 +10,15 @@ void PawnScan::Scan(ChessPiece* chessPiece, int i, ChessBoard &Board) {
     // if black, then following if statement should inverse values to correctly implement direction
     // 0 means upper left, 1 means up by 1 square, 2 means upper right, 3 means up by 2 squares (initial move)
     if (i == 0) {
-        rChange = -1;
-        cChange = 1;
+        rChange = 1;
+        cChange = -1;
     } else if (i == 1) {
-        cChange = 1;
+        rChange = 1;
     } else if (i == 2) {
         rChange = 1;
         cChange = 1;
     } else if (i == 3) {
-        cChange = 2;
+        rChange = 2;
     }
 
 
@@ -36,7 +36,7 @@ void PawnScan::Scan(ChessPiece* chessPiece, int i, ChessBoard &Board) {
 	// checks if only moving
 	if ((i == 1 || i == 3) && Board.getSquare(r,c)->getPiece() == nullptr)
 	    chessPiece->add_move(Board.getSquare(r,c));
-	else if (Board.getSquare(r,c)->getPiece() != nullptr && ((i == 2 || i == 4) && Board.getSquare(r,c)->getPiece()->get_color() != chessPiece->get_color()))
+	else if (Board.getSquare(r,c)->getPiece() != nullptr && ((i == 2 || i == 0) && Board.getSquare(r,c)->getPiece()->get_color() != chessPiece->get_color()))
 	    chessPiece->add_move(Board.getSquare(r,c));
     }
 }

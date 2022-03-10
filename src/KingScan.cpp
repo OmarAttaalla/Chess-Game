@@ -25,10 +25,10 @@ void KingScan::Scan(ChessPiece* chessPiece, int i, ChessBoard &Board) {
         r += 0;
         c += 1;
     } else if (i == 6) {
-        r -= -1;
+        r += -1;
         c += 0;
     } else if (i == 7) {
-        r -= 0;
+        r += 0;
         c += -1;
     }
     

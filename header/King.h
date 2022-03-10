@@ -13,7 +13,7 @@ class King : public ChessPiece {
             set_placeAt(newPlaceAt);
             kingScan = new KingScan;
         }
-        ~King(){delete kingScan;}
+        virtual ~King(){delete kingScan;}
         virtual void scan(ChessBoard &Board);
         virtual void pieceDeath() {}
         bool checkScan(ChessBoard &Board); //checks if the king would be in check 

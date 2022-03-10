@@ -5,7 +5,7 @@ ADD_SUBDIRECTORY(googletest)
 SET(CMAKE_CXX_STANDARD 11)
 
 
-ADD_EXECUTABLE(testRunn
+ADD_EXECUTABLE(testfile
 	unit_tests.cpp
 	src/ChessPiece.cpp
 	src/ChessBoard.cpp
@@ -23,5 +23,5 @@ ADD_EXECUTABLE(testRunn
 )
 
 
-TARGET_LINK_LIBRARIES(testRunn gtest)
-TARGET_COMPILE_DEFINITIONS(testRunn PRIVATE gtest_disable_pthreads=ON)
+TARGET_LINK_LIBRARIES(testfile gtest)
+TARGET_COMPILE_DEFINITIONS(testfile PRIVATE gtest_disable_pthreads=ON)

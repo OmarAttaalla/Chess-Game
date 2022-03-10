@@ -11,6 +11,7 @@ class ChessPiece {
         std::vector<Square*> moveableSquares; //vector of Square moveable locations
         Square* placeAt; //The square where the piece is located
     public:
+	virtual ~ChessPiece(){}
         virtual void moves(Square* sq, ChessBoard &Board);
         virtual void scan(ChessBoard &Board) = 0; //function that scans available moves for the chess piece
         virtual void pieceDeath() = 0;

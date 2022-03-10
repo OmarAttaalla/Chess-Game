@@ -53,6 +53,12 @@ Features:
       * StraightScan inherits from ScanAlg and implements the Scan method that represents the Straight Movement Algorithm.
     * DiagonalScan
       * DiagonalScan inherits from ScanAlg and implements the Scan method that represents the Diagonal Movement Algorithm.
+    * KingScan
+      * KingScan inherits from ScanAlg and implements the Scan method that represents all squares 1 distance away from the Piece.
+    * KnightScan
+      * KnightScan inherits from ScanAlg and implements the Scan method that represents the L Shaped movement.
+    * PawnScan
+      * PawnScan inherits from ScanAlg and implements the Scan method that represents the Pawn's movement. Can only move 1 square after a move but 2 as the first move.
 ## Design Pattern
 * The main design pattern we used is the Strategy Design Pattern. For the various moves of a chess piece, we decided it would be better to create Strategy class that includes all the different moves (Straight Moves, Diagonal Moves, etc.). Since many pieces use the same type of moves, such as the Queen using the Straight Move while the Rook also uses the Straight Move, using the strategy design pattern makes it so that the different Move Algorithms are not written multiple times. This will also make it much easier in the future, since adding new algorithms and editing an existing algorithm will only require the change of one method.
 

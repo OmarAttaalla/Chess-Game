@@ -30,10 +30,10 @@
    <widget class="QLabel" name="bPawn1">
     <property name="geometry">
      <rect>
-      <x>27</x>
-      <y>75</y>
-      <width>38</width>
-      <height>45</height>
+      <x>20</x>
+      <y>70</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -56,10 +56,10 @@
    <widget class="QLabel" name="bPawn2">
     <property name="geometry">
      <rect>
-      <x>77</x>
-      <y>75</y>
-      <width>38</width>
-      <height>45</height>
+      <x>70</x>
+      <y>70</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -69,10 +69,10 @@
    <widget class="QLabel" name="bPawn3">
     <property name="geometry">
      <rect>
-      <x>127</x>
-      <y>75</y>
-      <width>38</width>
-      <height>45</height>
+      <x>120</x>
+      <y>70</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -82,10 +82,10 @@
    <widget class="QLabel" name="bPawn4">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>75</y>
-      <width>38</width>
-      <height>45</height>
+      <x>170</x>
+      <y>70</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -95,10 +95,10 @@
    <widget class="QLabel" name="bPawn5">
     <property name="geometry">
      <rect>
-      <x>227</x>
-      <y>75</y>
-      <width>38</width>
-      <height>45</height>
+      <x>220</x>
+      <y>70</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -108,10 +108,10 @@
    <widget class="QLabel" name="bPawn6">
     <property name="geometry">
      <rect>
-      <x>277</x>
-      <y>75</y>
-      <width>38</width>
-      <height>45</height>
+      <x>270</x>
+      <y>70</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -121,10 +121,10 @@
    <widget class="QLabel" name="bPawn7">
     <property name="geometry">
      <rect>
-      <x>327</x>
-      <y>75</y>
-      <width>38</width>
-      <height>45</height>
+      <x>320</x>
+      <y>70</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -134,10 +134,10 @@
    <widget class="QLabel" name="bPawn8">
     <property name="geometry">
      <rect>
-      <x>377</x>
-      <y>75</y>
-      <width>38</width>
-      <height>45</height>
+      <x>370</x>
+      <y>70</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -147,10 +147,10 @@
    <widget class="QLabel" name="bRook1">
     <property name="geometry">
      <rect>
-      <x>25</x>
-      <y>25</y>
-      <width>41</width>
-      <height>45</height>
+      <x>20</x>
+      <y>20</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -160,10 +160,10 @@
    <widget class="QLabel" name="bRook2">
     <property name="geometry">
      <rect>
-      <x>375</x>
-      <y>25</y>
-      <width>41</width>
-      <height>45</height>
+      <x>370</x>
+      <y>20</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -173,10 +173,10 @@
    <widget class="QLabel" name="bKnight1">
     <property name="geometry">
      <rect>
-      <x>75</x>
-      <y>25</y>
-      <width>41</width>
-      <height>45</height>
+      <x>70</x>
+      <y>20</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -186,10 +186,10 @@
    <widget class="QLabel" name="bKnight2">
     <property name="geometry">
      <rect>
-      <x>325</x>
-      <y>25</y>
-      <width>41</width>
-      <height>45</height>
+      <x>320</x>
+      <y>20</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -199,10 +199,10 @@
    <widget class="QLabel" name="bBishop1">
     <property name="geometry">
      <rect>
-      <x>124</x>
-      <y>25</y>
-      <width>45</width>
-      <height>45</height>
+      <x>120</x>
+      <y>20</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -212,10 +212,10 @@
    <widget class="QLabel" name="bBishop2">
     <property name="geometry">
      <rect>
-      <x>274</x>
-      <y>25</y>
-      <width>45</width>
-      <height>45</height>
+      <x>270</x>
+      <y>20</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -225,10 +225,10 @@
    <widget class="QLabel" name="bKing">
     <property name="geometry">
      <rect>
-      <x>224</x>
-      <y>25</y>
-      <width>45</width>
-      <height>45</height>
+      <x>220</x>
+      <y>20</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -238,10 +238,10 @@
    <widget class="QLabel" name="bQueen">
     <property name="geometry">
      <rect>
-      <x>172</x>
-      <y>25</y>
-      <width>49</width>
-      <height>45</height>
+      <x>170</x>
+      <y>20</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -251,10 +251,10 @@
    <widget class="QLabel" name="wPawn2">
     <property name="geometry">
      <rect>
-      <x>77</x>
-      <y>325</y>
-      <width>38</width>
-      <height>45</height>
+      <x>70</x>
+      <y>320</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -264,10 +264,10 @@
    <widget class="QLabel" name="wPawn3">
     <property name="geometry">
      <rect>
-      <x>127</x>
-      <y>325</y>
-      <width>38</width>
-      <height>45</height>
+      <x>120</x>
+      <y>320</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -277,10 +277,10 @@
    <widget class="QLabel" name="wPawn1">
     <property name="geometry">
      <rect>
-      <x>27</x>
-      <y>325</y>
-      <width>38</width>
-      <height>45</height>
+      <x>20</x>
+      <y>320</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -290,10 +290,10 @@
    <widget class="QLabel" name="wPawn5">
     <property name="geometry">
      <rect>
-      <x>227</x>
-      <y>325</y>
-      <width>38</width>
-      <height>45</height>
+      <x>220</x>
+      <y>320</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -303,10 +303,10 @@
    <widget class="QLabel" name="wPawn6">
     <property name="geometry">
      <rect>
-      <x>277</x>
-      <y>325</y>
-      <width>38</width>
-      <height>45</height>
+      <x>270</x>
+      <y>320</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -316,10 +316,10 @@
    <widget class="QLabel" name="wPawn7">
     <property name="geometry">
      <rect>
-      <x>327</x>
-      <y>325</y>
-      <width>38</width>
-      <height>45</height>
+      <x>320</x>
+      <y>320</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -329,10 +329,10 @@
    <widget class="QLabel" name="wPawn4">
     <property name="geometry">
      <rect>
-      <x>177</x>
-      <y>325</y>
-      <width>38</width>
-      <height>45</height>
+      <x>170</x>
+      <y>320</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -342,10 +342,10 @@
    <widget class="QLabel" name="wPawn8">
     <property name="geometry">
      <rect>
-      <x>377</x>
-      <y>325</y>
-      <width>38</width>
-      <height>45</height>
+      <x>370</x>
+      <y>320</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -355,10 +355,10 @@
    <widget class="QLabel" name="wKing">
     <property name="geometry">
      <rect>
-      <x>224</x>
-      <y>375</y>
-      <width>45</width>
-      <height>45</height>
+      <x>220</x>
+      <y>370</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -368,10 +368,10 @@
    <widget class="QLabel" name="wBishop2">
     <property name="geometry">
      <rect>
-      <x>274</x>
-      <y>375</y>
-      <width>45</width>
-      <height>45</height>
+      <x>270</x>
+      <y>370</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -381,10 +381,10 @@
    <widget class="QLabel" name="wBishop1">
     <property name="geometry">
      <rect>
-      <x>124</x>
-      <y>375</y>
-      <width>45</width>
-      <height>45</height>
+      <x>120</x>
+      <y>370</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -394,10 +394,10 @@
    <widget class="QLabel" name="wKnight2">
     <property name="geometry">
      <rect>
-      <x>325</x>
-      <y>375</y>
-      <width>41</width>
-      <height>45</height>
+      <x>320</x>
+      <y>370</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -407,10 +407,10 @@
    <widget class="QLabel" name="wKnight1">
     <property name="geometry">
      <rect>
-      <x>75</x>
-      <y>375</y>
-      <width>41</width>
-      <height>45</height>
+      <x>70</x>
+      <y>370</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -420,10 +420,10 @@
    <widget class="QLabel" name="wRook1">
     <property name="geometry">
      <rect>
-      <x>25</x>
-      <y>375</y>
-      <width>41</width>
-      <height>45</height>
+      <x>20</x>
+      <y>370</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -433,10 +433,10 @@
    <widget class="QLabel" name="wQueen">
     <property name="geometry">
      <rect>
-      <x>172</x>
-      <y>375</y>
-      <width>49</width>
-      <height>45</height>
+      <x>170</x>
+      <y>370</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -446,10 +446,10 @@
    <widget class="QLabel" name="wRook2">
     <property name="geometry">
      <rect>
-      <x>375</x>
-      <y>375</y>
-      <width>41</width>
-      <height>45</height>
+      <x>370</x>
+      <y>370</y>
+      <width>50</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="text">
@@ -1504,6 +1504,48 @@
      <bool>true</bool>
     </property>
    </widget>
+   <widget class="QLabel" name="turnLabel">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>40</y>
+      <width>200</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>20</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mainMenu">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>370</y>
+      <width>120</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Main Menu</string>
+    </property>
+   </widget>
    <zorder>boardEdge</zorder>
    <zorder>chessBoard</zorder>
    <zorder>bPawn1</zorder>
@@ -1602,6 +1644,8 @@
    <zorder>g2</zorder>
    <zorder>e5</zorder>
    <zorder>f8</zorder>
+   <zorder>turnLabel</zorder>
+   <zorder>mainMenu</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

@@ -188,10 +188,10 @@ TEST(KingTest, checkmateSurroundedInCheckMate) {
 
     EXPECT_TRUE(mainKing->checkmate(Board));
 
-    delete mainKing;
-    delete enemyBishop;
-    delete newBishop1;
-    delete newBishop2;
+    // delete mainKing;
+    // delete enemyBishop;
+    // delete newBishop1;
+    // delete newBishop2;
 }
 
 TEST(KingTest, checkmateOnlyInCheck) {
@@ -215,10 +215,10 @@ TEST(KingTest, checkmateOnlyInCheck) {
 
     EXPECT_FALSE(mainKing->checkmate(Board));
 
-    delete mainKing;
-    delete enemyBishop;
-    delete newBishop1;
-    delete newBishop2;
+    // delete mainKing;
+    // delete enemyBishop;
+    // delete newBishop1;
+    // delete newBishop2;
 }
 
 #endif

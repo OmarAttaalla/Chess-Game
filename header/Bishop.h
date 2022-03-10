@@ -8,8 +8,6 @@ using namespace std;
 
 class Bishop : public ChessPiece {
     private:
-        Square* placeAt;
-        vector<Square*> moveableSquares;
         ScanAlg* diagonal;        
 
     public:

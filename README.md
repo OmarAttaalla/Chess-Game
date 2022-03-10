@@ -59,6 +59,7 @@ Features:
  ## Screenshots
  ![ChessBoard(1)](https://user-images.githubusercontent.com/51334912/157558719-4083bb40-f9ee-4c35-8a88-4f8da4ef8d55.png)
  ![ChessBoard(2)](https://user-images.githubusercontent.com/51334912/157558826-c419740c-41cb-4fee-b9cb-68cef44ced1a.png)
+ ![Checkmate](https://user-images.githubusercontent.com/51334912/157611943-9d8f0c27-8de9-4174-b720-cdb258b83b30.png)
  ## Installation/Usage
  * Windows Users:
    * To run our program you need to download and install QT

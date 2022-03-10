@@ -20,6 +20,8 @@ TEST(PawnTest, NoPiecesAround){
     }
     
     EXPECT_EQ(expectedSquares.size(), moveableSquares.size());
+
+    delete p1;
 }
 
 TEST(PawnTest, UpperLeftEnemyPiece){
@@ -40,6 +42,9 @@ TEST(PawnTest, UpperLeftEnemyPiece){
     }
 
     EXPECT_EQ(expectedSquares.size(), moveableSquares.size());
+
+    delete p1;
+    delete p2;
 }
 
 TEST(PawnTest, UpperRightEnemyPiece){
@@ -60,6 +65,9 @@ TEST(PawnTest, UpperRightEnemyPiece){
     }
 
     EXPECT_EQ(expectedSquares.size(), moveableSquares.size());
+
+    delete p1;
+    delete p2;
 }
 
 TEST(PawnTest, FullMoveOption){
@@ -83,6 +91,10 @@ TEST(PawnTest, FullMoveOption){
     }
 
     EXPECT_EQ(expectedSquares.size(), moveableSquares.size());
+
+    delete p1;
+    delete p2;
+    delete p3;
 }
 
 TEST(PawnTest, MovedOnceAlready){
@@ -103,6 +115,7 @@ TEST(PawnTest, MovedOnceAlready){
     }
 
     EXPECT_EQ(expectedSquares.size(), moveableSquares.size());
+    delete p1;
 }
 
 /*

@@ -10,6 +10,7 @@ class Pawn : public ChessPiece {
 	bool initialMove;
     public:
 	Pawn(bool newColor, Square* newPlaceAt);
+	virtual ~Pawn();
 	virtual void moves(Square* sq, ChessBoard &Board);
 	virtual void scan(ChessBoard &Board);
 	virtual void pieceDeath() {}

@@ -12,6 +12,7 @@ class Knight : public ChessPiece {
         ScanAlg* movement;
     public:
         Knight(bool newColor, Square* newPlaceAt);
+        virtual ~Knight(){delete movement;}
         virtual void scan(ChessBoard &Board);
         virtual void pieceDeath() {}
 };

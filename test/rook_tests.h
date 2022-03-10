@@ -33,6 +33,8 @@ TEST(RookTest, NoPiecesAround){
     }
     
     EXPECT_TRUE(expectedSquares.size() == moveableSquares.size());
+
+    delete Rook1;
 }
 
 TEST(RookTest, SurroundedOppositeColor) {
@@ -63,6 +65,12 @@ TEST(RookTest, SurroundedOppositeColor) {
     }
     
     EXPECT_TRUE(expectedSquares.size() == moveableSquares.size());
+
+    delete mainRook;
+    delete s_1;
+    delete s_2;
+    delete s_3;
+    delete s_4;
 }
 
 TEST(RookTest, SurroundedSameColor) {
@@ -86,6 +94,12 @@ TEST(RookTest, SurroundedSameColor) {
     std::vector<Square*> moveableSquares = mainRook->get_moveableSquares(); //get the moveable squares that were just scanned
 
     EXPECT_TRUE(moveableSquares.size() == 0);
+
+    delete mainRook;
+    delete s_1;
+    delete s_2;
+    delete s_3;
+    delete s_4;
     
 }
 

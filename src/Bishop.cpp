@@ -6,6 +6,10 @@ Bishop::Bishop(bool newColor, Square* newPlaceAt) {
     diagonal = new DiagonalScan;
 }
 
+Bishop::~Bishop() {
+    delete diagonal;
+}
+
 
 void Bishop::scan(ChessBoard &Board) {
     diagonal->Scan(this, 0, Board);

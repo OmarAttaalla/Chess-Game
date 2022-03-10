@@ -97,7 +97,7 @@ ChessBoard::ChessBoard() {
                     if (sideColor) {
                         whiteKing = newKing;
                     } else {
-                        blackKing = blackKing;
+                        blackKing = newKing;
                     }
                 }
 

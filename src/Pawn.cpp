@@ -7,6 +7,10 @@ Pawn::Pawn(bool newColor, Square* newPlaceAt) {
     initialMove = true;
 }
 
+Pawn::~Pawn() {
+   delete movement;
+}
+
 
 void Pawn::moves(Square* sq, ChessBoard &Board) {    
     for(int i = 0; i < moveableSquares.size(); i++) {

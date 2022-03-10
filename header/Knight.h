@@ -7,8 +7,6 @@
 
 class Knight : public ChessPiece {
     private:
-        Square* placeAt;
-        std::vector<Square*> moveableSquares;
         ScanAlg* movement;
     public:
         Knight(bool newColor, Square* newPlaceAt);

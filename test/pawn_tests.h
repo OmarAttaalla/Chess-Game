@@ -90,15 +90,15 @@ TEST(PawnTest, MovedOnceAlready){
     ChessPiece* p1 = new Pawn(true, Board.getSquare(4,4)); // creates white Pawn at 4,4
     Board.setSquare(p1, 4, 4);
     p1->scan(Board);
-
     p1->moves(Board.getSquare(5,4), Board);
+    //p1->clear_moveableSquares();
 
     p1->scan(Board);
     std::vector<Square*> moveableSquares = p1->get_moveableSquares();
     std::vector<std::vector<int>> expectedSquares = {{6,4}};
 
     for (int i = 0; i < moveableSquares.size(); ++i) {
-	cout << moveableSquares.at(i)->get_row() << " " << moveableSquares.at(i)->get_column() << endl;
+	//cout << moveableSquares.at(i)->get_row() << " " << moveableSquares.at(i)->get_column() << endl;
         EXPECT_TRUE(find_square(moveableSquares.at(i), expectedSquares));
     }
 

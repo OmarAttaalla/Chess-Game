@@ -6,7 +6,7 @@
 #include <iostream>
 
 class ChessPiece {
-    private:
+    protected:
         bool color;
         std::vector<Square*> moveableSquares; //vector of Square moveable locations
         Square* placeAt; //The square where the piece is located

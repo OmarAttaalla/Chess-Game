@@ -23,6 +23,8 @@ TEST(KingTest, ScanNoPiecesAround){
     }
     
     EXPECT_TRUE(expectedSquares.size() == moveableSquares.size());
+
+    delete King1;
 }
 
 TEST(KingTest, ScanSurroundedOppositeColor) {
@@ -61,6 +63,16 @@ TEST(KingTest, ScanSurroundedOppositeColor) {
     }
     
     EXPECT_TRUE(expectedSquares.size() == moveableSquares.size());
+
+    delete mainKing;
+    delete s_1;
+    delete s_2;
+    delete s_3;
+    delete s_4;
+    delete s_5;
+    delete s_6;
+    delete s_7;
+    delete s_8;
 }
 
 TEST(KingTest, ScanSurroundedSameColor) {
@@ -91,6 +103,16 @@ TEST(KingTest, ScanSurroundedSameColor) {
     std::vector<Square*> moveableSquares = mainKing->get_moveableSquares(); //get the moveable squares that were just scanned
 
     EXPECT_TRUE(moveableSquares.size() == 0);
+
+    delete mainKing;
+    delete s_1;
+    delete s_2;
+    delete s_3;
+    delete s_4;
+    delete s_5;
+    delete s_6;
+    delete s_7;
+    delete s_8;
     
 }
 
@@ -105,6 +127,9 @@ TEST (KingTest, checkScanInCheck) {
     Board.setSquare(newBishop, 6, 6);
 
     EXPECT_TRUE(mainKing->checkScan(Board));
+
+    delete mainKing;
+    delete newBishop;
 }
 
 TEST (KingTest, checkScanInCheckBySameColor) {
@@ -118,6 +143,9 @@ TEST (KingTest, checkScanInCheckBySameColor) {
     Board.setSquare(newBishop, 6, 6);
 
     EXPECT_FALSE(mainKing->checkScan(Board));
+
+    delete mainKing;
+    delete newBishop;
 }
 
 TEST (KingTest, checkScanNotInCheck) {
@@ -133,6 +161,10 @@ TEST (KingTest, checkScanNotInCheck) {
     Board.setSquare(newBishop1, 6, 6);
 
     EXPECT_FALSE(mainKing->checkScan(Board));
+
+    delete mainKing;
+    delete newBishop;
+    delete newBishop1;
 }
 
 TEST(KingTest, checkmateSurroundedInCheckMate) {

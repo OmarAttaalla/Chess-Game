@@ -52,7 +52,7 @@ bool King::checkScan(ChessBoard &Board) {
     return inCheck;
 }
 
-bool King::checkmate(ChessBoard Board) {
+bool King::checkmate(ChessBoard &Board) {
     std::vector<ChessPiece*> oppPieces = Board.get_pieces(get_color()); //same color pieces
 
     for (int i = 0; i < oppPieces.size(); ++i) { //traverse pieces

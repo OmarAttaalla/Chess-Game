@@ -94,7 +94,13 @@ ChessBoard::ChessBoard() {
                 } else if (g == 3) {
                     newPiece = new Queen(sideColor, newSquare); //create queen
                 } else if (g == 4) {
-                    newPiece = new King(sideColor, newSquare); // create King
+                    King* newKing = new King(sideColor, newSquare);// create King
+                    newPiece = newKing;
+                    if (sideColor) {
+                        whiteKing = newKing;
+                    } else {
+                        blackKing = newKing;
+                    }
                 }
 
                 newSquare->setPiece(newPiece);
@@ -103,6 +109,33 @@ ChessBoard::ChessBoard() {
         }
         squares.push_back(rows);
     }
+}
+
+ChessBoard::~ChessBoard(){
+     for (int i = 0; i < whitePieces.size(); ++i) {
+         if (whitePieces.at(i) != nullptr) {
+             delete whitePieces.at(i);
+             whitePieces.at(i) = nullptr;
+         }
+     }
+
+     for (int g = 0; g < blackPieces.size(); ++g) {
+         if (blackPieces.at(g) != nullptr) {
+             delete blackPieces.at(g);
+             blackPieces.at(g) = nullptr;
+         }
+     }
+    
+
+     for (int q = 0; q < squares.size(); ++q) {
+         for (int n = 0; n < squares.at(q).size(); ++n) {
+             if (squares.at(q).at(n) != nullptr) {
+                  delete squares.at(q).at(n);
+             }
+         }
+     }
+
+   
 }
 
 //for testing purposes (Sets the Piece in the Square to the requests ChessPiece)

@@ -7,9 +7,10 @@ void ChessPiece::moves(Square* sq, ChessBoard &Board) {
                 Board.removePiece(sq->getPiece());
             }
 
-	    placeAt->setPiece(nullptr); //set the current location to blank
+            placeAt->setPiece(nullptr); //set the current location to blank
             moveableSquares.at(i)->setPiece(this);
             placeAt = moveableSquares.at(i);
+
             clear_moveableSquares();
             return;
         }

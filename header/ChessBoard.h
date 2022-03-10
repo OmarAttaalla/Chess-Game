@@ -7,6 +7,7 @@ class ChessBoard; //forward declare ChessBoard
 #include "ChessPiece.h"
 #include <vector>
 
+class King; //forward declare King
 
 class ChessBoard {
    private:
@@ -14,10 +15,13 @@ class ChessBoard {
        std::vector<ChessPiece*> whitePieces;
        std::vector<ChessPiece*> blackPieces;
    public:
+       King* whiteKing;
+       King* blackKing;
+       
        //for testing purposes (Creates board with no pieces)
        ChessBoard(bool t);
        ChessBoard();
-
+       ~ChessBoard();
        std::vector<ChessPiece*> get_pieces(bool color);
 
        //for testing purposes (Sets the Piece in the Square to the requests ChessPiece)

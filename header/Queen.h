@@ -16,6 +16,7 @@ class Queen : public ChessPiece {
             straightScan = new StraightScan;
             diagonalScan = new DiagonalScan;
         }
+        virtual ~Queen(){delete straightScan; delete diagonalScan;}
         virtual void scan(ChessBoard &Board);
         virtual void pieceDeath() {}
 };

@@ -13,6 +13,7 @@ class Rook : public ChessPiece {
             set_placeAt(newPlaceAt);
             straightScan = new StraightScan;
         }
+        virtual ~Rook(){delete straightScan;}
         virtual void scan(ChessBoard &Board);
         virtual void pieceDeath() {}
 };

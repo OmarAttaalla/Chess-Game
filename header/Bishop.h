@@ -12,6 +12,7 @@ class Bishop : public ChessPiece {
 
     public:
         Bishop(bool newColor, Square* newPlaceAt);
+        virtual ~Bishop();
         virtual void scan(ChessBoard &Board);
         virtual void pieceDeath() {}
 };

@@ -56,19 +56,10 @@ Features:
 ## Design Pattern
 * The main design pattern we used is the Strategy Design Pattern. For the various moves of a chess piece, we decided it would be better to create Strategy class that includes all the different moves (Straight Moves, Diagonal Moves, etc.). Since many pieces use the same type of moves, such as the Queen using the Straight Move while the Rook also uses the Straight Move, using the strategy design pattern makes it so that the different Move Algorithms are not written multiple times. This will also make it much easier in the future, since adding new algorithms and editing an existing algorithm will only require the change of one method.
 
- > ## Final deliverable
- > All group members will give a demo to the TA/reader during lab time. The TA/reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
- 
  ## Screenshots
- > Screenshots of the input/output after running your application
  ![ChessBoard(1)](https://user-images.githubusercontent.com/51334912/157558719-4083bb40-f9ee-4c35-8a88-4f8da4ef8d55.png)
  ![ChessBoard(2)](https://user-images.githubusercontent.com/51334912/157558826-c419740c-41cb-4fee-b9cb-68cef44ced1a.png)
  ## Installation/Usage
- > Instructions on installing and running your application
  * Windows Users:
    * To run our program you need to download and install QT
    * Clone this repository

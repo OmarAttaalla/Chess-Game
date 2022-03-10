@@ -36,7 +36,7 @@ void PawnScan::Scan(ChessPiece* chessPiece, int i, ChessBoard &Board) {
 	// checks if only moving
 	if ((i == 1 || i == 3) && Board.getSquare(r,c)->getPiece() == nullptr)
 	    chessPiece->add_move(Board.getSquare(r,c));
-	else if ((i == 2 || i == 4) && Board.getSquare(r,c)->getPiece()->get_color() != chessPiece->get_color())
+	else if (Board.getSquare(r,c)->getPiece() != nullptr && ((i == 2 || i == 4) && Board.getSquare(r,c)->getPiece()->get_color() != chessPiece->get_color()))
 	    chessPiece->add_move(Board.getSquare(r,c));
     }
 }

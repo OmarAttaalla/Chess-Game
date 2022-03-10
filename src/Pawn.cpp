@@ -14,6 +14,7 @@ void Pawn::moves(Square* sq, ChessBoard &Board) {
 	    if (sq->getPiece() != nullptr) {
 		Board.removePiece(sq->getPiece());
 	    }
+	    placeAt->setPiece(nullptr); //set the current location to blank
 	    moveableSquares.at(i)->setPiece(this);
 	    placeAt = moveableSquares.at(i);
 	    clear_moveableSquares();

@@ -79,8 +79,9 @@ ChessBoard::ChessBoard() {
             }
 
             if (i == 1 || i == 6) {
-                ChessPiece* newPiece = new Pawn; //create pawn
+                ChessPiece* newPiece = new Pawn(sideColor, newSquare); //create pawn
                 newSquare->setPiece(newPiece);
+		PieceSet->push_back(newPiece);
             } else if (i == 0 || i == 7) {
                 ChessPiece* newPiece;
                 if (g == 0 || g == 7) { //add rooks

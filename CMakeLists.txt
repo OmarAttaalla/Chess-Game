@@ -14,10 +14,12 @@ ADD_EXECUTABLE(test
 	src/Knight.cpp
 	src/Bishop.cpp
 	src/King.cpp
+	src/Pawn.cpp
 	src/StraightScan.cpp
 	src/DiagonalScan.cpp
 	src/KnightScan.cpp
 	src/KingScan.cpp
+	src/PawnScan.cpp
 )
 
 

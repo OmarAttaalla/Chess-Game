@@ -104,33 +104,30 @@ ChessBoard::ChessBoard() {
 }
 
 ChessBoard::~ChessBoard(){
-    // for (int i = 0; i < whitePieces.size(); ++i) {
-    //     if (whitePieces.at(i) != nullptr) {
-    //         std::cout << whitePieces.at(i)->get_placeAt()->get_row() << "," << whitePieces.at(i)->get_placeAt()->get_column() << std::endl;
-    //         delete whitePieces.at(i);
-    //         whitePieces.at(i) = nullptr;
-    //     }
-    // }
+     for (int i = 0; i < whitePieces.size(); ++i) {
+         if (whitePieces.at(i) != nullptr) {
+             delete whitePieces.at(i);
+             whitePieces.at(i) = nullptr;
+         }
+     }
 
-    // std::cout << "WHITE DONE" << std::endl;
+     for (int g = 0; g < blackPieces.size(); ++g) {
+         if (blackPieces.at(g) != nullptr) {
+             delete blackPieces.at(g);
+             blackPieces.at(g) = nullptr;
+         }
+     }
+    
 
-    // for (int g = 0; g < blackPieces.size(); ++g) {
-    //     if (blackPieces.at(g) != nullptr) {
-    //         std::cout << blackPieces.at(g) << std::endl;
-    //         delete blackPieces.at(g);
-    //         blackPieces.at(g) = nullptr;
-    //     }
-    // }
+     for (int q = 0; q < squares.size(); ++q) {
+         for (int n = 0; n < squares.at(q).size(); ++n) {
+             if (squares.at(q).at(n) != nullptr) {
+                  delete squares.at(q).at(n);
+             }
+         }
+     }
 
-    // for (int q = 0; q < squares.size(); ++q) {
-    //     for (int n = 0; n < squares.at(q).size(); ++n) {
-    //         if (squares.at(q).at(n) != nullptr) {
-    //             // delete squares.at(q).at(n);
-    //         }
-    //     }
-    // }
-
-    // std::cout << "DEALLOCATE" << std::endl;
+   
 }
 
 //for testing purposes (Sets the Piece in the Square to the requests ChessPiece)

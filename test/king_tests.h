@@ -187,11 +187,6 @@ TEST(KingTest, checkmateSurroundedInCheckMate) {
     Board.addPiece(newBishop2);
 
     EXPECT_TRUE(mainKing->checkmate(Board));
-
-    delete mainKing;
-    delete enemyBishop;
-    delete newBishop1;
-    delete newBishop2;
 }
 
 TEST(KingTest, checkmateOnlyInCheck) {
@@ -214,11 +209,6 @@ TEST(KingTest, checkmateOnlyInCheck) {
     Board.addPiece(newBishop2);
 
     EXPECT_FALSE(mainKing->checkmate(Board));
-
-    delete mainKing;
-    delete enemyBishop;
-    delete newBishop1;
-    delete newBishop2;
 }
 
 #endif
